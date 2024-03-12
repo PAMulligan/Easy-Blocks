@@ -27,6 +27,8 @@ final class EasyBlocks
 			wp_enqueue_style('easyblocks-style', $style_url, array());
 		});
 		add_action( 'init', function() {
+			register_block_type( __DIR__ . '/build/blocks/postCarousel' );
+
 			$script_url = plugins_url('build/index.js', __FILE__);
 			wp_enqueue_script("easyblocks-index", $script_url, array('wp-blocks', 'wp-element', 'wp-editor'));
 		});
