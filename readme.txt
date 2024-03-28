@@ -2,7 +2,7 @@
 Author:            Paul Mulliganiel
 Tags:              block
 Tested up to:      6.1
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 
 Custom blocks for any Gutenberg theme.
 
@@ -18,4 +18,4 @@ with any Gutenberg theme in mind.
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.1 = Added Post Carousel block
