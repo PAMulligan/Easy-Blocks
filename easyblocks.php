@@ -23,14 +23,28 @@ final class EasyBlocks
 	static function init()
 	{
 		add_action( 'enqueue_block_assets', function() {
+			wp_enqueue_style("dashicons");
 			$style_url = plugins_url('build/style-index.css', __FILE__);
 			wp_enqueue_style('easyblocks-style', $style_url, array());
 		});
 		add_action( 'init', function() {
-			register_block_type( __DIR__ . '/build/blocks/postCarousel' );
+			add_filter('block_categories_all', function ($categories) {
+				array_unshift($categories, [
+					'slug' => 'easyblocks',
+					'title' => 'Easy Blocks'
+				]);
+				return $categories;
+			});
+			register_block_type( __DIR__ . './build/blocks/easyGallery ');
+			register_block_type( __DIR__ . '/build/blocks/easyImage' );
+			register_block_pattern_category('easyblocks', array(
+				'label' => __('Easy Blocks', 'easyblocks')
+			));
 
 			$script_url = plugins_url('build/index.js', __FILE__);
 			wp_enqueue_script("easyblocks-index", $script_url, array('wp-blocks', 'wp-element', 'wp-editor'));
+			$style_url = plugins_url("build/style-index.css", __FILE__);
+			wp_enqueue_style('easyblocks-style', $style_url, array());
 		});
 	}
 

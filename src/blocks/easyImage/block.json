@@ -1,14 +1,21 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "easyblocks/post-carousel",
-	"version": "1.0.0",
-	"title": "Post Carousel",
-	"category": "easydoesit",
-	"description": "A carousel of either core or custom post types, choosable by the user.",
+	"name": "easyblocks/easy-image",
+	"version": "0.1.0",
+	"title": "Easy Image",
+	"category": "easyblocks",
+	"icon": "format-image",
+	"description": "Image for the Easy Gallery",
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"imageId": {
+			"type": "number"
+		}
+	},
+	"parent": ["easyblocks/easy-gallery"],
 	"textdomain": "easyblocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

@@ -1,7 +1,7 @@
 {
 	"name": "easy-blocks",
 	"version": "1.0.1",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Block design customizations for use with Easy Does It theme.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
@@ -16,5 +16,11 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^27.5.0"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.5.0",
+		"@fortawesome/free-solid-svg-icons": "^6.5.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@wordpress/icons": "^9.37.0"
 	}
 }
