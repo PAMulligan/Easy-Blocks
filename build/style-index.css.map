@@ -1,1 +1,0 @@
-{"version":3,"file":"./style-index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://easy-blocks/./src/style.scss"],"sourcesContent":[".easyblocks-half-highlight {\r\n\tbackground-size: 100% 40%;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position-y: 90%;\r\n}\r\n"],"names":[],"sourceRoot":""}

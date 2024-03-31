@@ -35,8 +35,9 @@ final class EasyBlocks
 				]);
 				return $categories;
 			});
+			// register_block_type( __DIR__ . './build/blocks/curvy' );
 			register_block_type( __DIR__ . './build/blocks/easyGallery ');
-			register_block_type( __DIR__ . '/build/blocks/easyImage' );
+			// register_block_type( __DIR__ . './build/blocks/easyImage' );
 			register_block_pattern_category('easyblocks', array(
 				'label' => __('Easy Blocks', 'easyblocks')
 			));
