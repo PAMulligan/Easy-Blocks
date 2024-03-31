@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "easyblocks/easy-group",
+	"version": "1.0.1",
+	"title": "Easy Group",
+	"category": "easyblocks",
+	"icon": "table",
+	"description": "A collection of Easy Buttons that lead to buttons for different post types",
+	"supports": {
+		"html": false,
+		"spacing": {
+			"blockGap": true
+		}
+	},
+	"attributes": {
+		"justifyContent": {
+			"type": "string",
+			"enum": ["left", "center", "right"],
+			"default": "left"
+		}
+	},
+	"textdomain": "easyblocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -4,7 +4,7 @@
 	"name": "easyblocks/easycurve",
 	"version": "1.0.1",
 	"title": "Easy Curve",
-	"category": "widgets",
+	"category": "easyblocks",
 	"icon": "appearance",
 	"description": "Put a curve in your design to give it some flair",
 	"supports": {

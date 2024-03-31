@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "easyblocks/easy-button",
+	"version": "1.0.1",
+	"title": "Easy Button",
+	"category": "easyblocks",
+	"icon": "button",
+	"description": "A button that links to a particular post type",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true,
+			"link": false,
+			"gradients": true,
+			"enableContrastChecker": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"attributes": {
+		"postType": {
+			"type": "string",
+			"default": ""
+		},
+		"linkedPost": {
+			"type": "number"
+		},
+		"labelText": {
+			"type": "string",
+			"default": ""
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"background": "#000000",
+					"text": "#FFFFFF"
+				},
+				"spacing": {
+					"padding": {
+						"top": "15px",
+						"bottom": "15px",
+						"left": "15px",
+						"right": "15px"
+					}
+				}
+			}
+		}
+	},
+	"textdomain": "easyblocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"parent": ["easyblocks/easy-group"]
+}
