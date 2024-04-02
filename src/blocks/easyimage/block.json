@@ -13,6 +13,12 @@
 	"attributes": {
 		"imageId": {
 			"type": "number"
+		},
+		"tagline": {
+			"type": "string"
+		},
+		"hoverText": {
+			"type": "string"
 		}
 	},
 	"parent": ["easyblocks/easy-gallery"],

@@ -1,4 +1,40 @@
 .wp-block-easyblocks-easy-image {
+	text-align: center;
+
+	.hover-container {
+		position: relative;
+		height: 131px;
+
+		.easy-gallery-hover-text {
+			position:relative;
+			visibility:hidden;
+			height: 100%;
+			padding-top: 25%;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 25%;
+		}
+
+		&:hover {
+			.easy-gallery-hover-text {
+				visibility: visible;
+				background-color: #ddd;
+			}
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	.easy-gallery-tagline {
+		background-color: #ddd;
+		margin: 8px 0;
+	}
+
     .media-select {
 		width: 100%;
 		padding: 10px 20px;

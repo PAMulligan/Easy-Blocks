@@ -2,11 +2,11 @@ import {
 	useBlockProps,
 	MediaUploadCheck,
 	MediaUpload,
+	InspectorControls
 } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
+import { PanelBody, TextControl } from "@wordpress/components";
 import metadata from "./block.json";
-import { useSelect } from "@wordpress/data";
-import { Icon } from "@wordpress/components";
 import { ImageThumbnail } from "../../components/imageThumbnail";
 import "./editor.scss";
 import { useImage } from "../../hooks/useImage";
@@ -22,40 +22,72 @@ export default function Edit(props) {
 	const imageSelected = !!props.attributes.imageId && !!image?.source_url;
 
 	return (
-		<div {...blockProps}>
-			{!!imageSelected && <ImageThumbnail imageId={props.attributes.imageId} />}
-			{!imageSelected && (
-				<div
-					style={{
-						display: "flex",
-						height: 150,
-						width: "100%",
-						background: "white",
-					}}
-				>
-					<FontAwesomeIcon icon={faPanorama} style={{ margin: "auto" }} />
-				</div>
-			)}
-			<MediaUploadCheck>
-				<MediaUpload
-					allowedTypes={["image"]}
-					render={({ open }) => {
-						return (
-							<button className="media-select" onClick={open}>
-								{imageSelected
-									? __("Replace image", metadata.textdomain)
-									: __("Select an image", metadata.textdomain)}
-							</button>
-						);
-					}}
-					value={props.attributes.imageId}
-					onSelect={(item) => {
-						props.setAttributes({
-							imageId: item.id,
-						});
-					}}
-				/>
-			</MediaUploadCheck>
-		</div>
+		<>
+			<div {...blockProps}>
+				{!!imageSelected && !!props.attributes.hoverText && (
+					<div className="hover-container">
+						<p className="easy-gallery-hover-text">{props.attributes.hoverText}</p>
+						<ImageThumbnail imageId={props.attributes.imageId} />
+					</div>
+				)}
+				{!!imageSelected && !props.attributes.hoverText &&
+					<ImageThumbnail imageId={props.attributes.imageId} />}
+				{!imageSelected && (
+					<div
+						style={{
+							display: "flex",
+							height: 150,
+							width: "100%",
+							background: "white",
+						}}
+					>
+						<FontAwesomeIcon icon={faPanorama} style={{ margin: "auto" }} />
+					</div>
+				)}
+				{!!props.attributes.tagline && (
+					<p className="easy-gallery-tagline">{props.attributes.tagline}</p>
+				)}
+				<MediaUploadCheck>
+					<MediaUpload
+						allowedTypes={["image"]}
+						render={({ open }) => {
+							return (
+								<button className="media-select" onClick={open}>
+									{imageSelected
+										? __("Replace image", metadata.textdomain)
+										: __("Select an image", metadata.textdomain)}
+								</button>
+							);
+						}}
+						value={props.attributes.imageId}
+						onSelect={(item) => {
+							props.setAttributes({
+								imageId: item.id,
+							});
+						}}
+					/>
+				</MediaUploadCheck>
+			</div>
+			<InspectorControls>
+				<PanelBody title={__("Text", metadata.textdomain)}>
+					<TextControl
+						label={__("Tagline")}
+						value={props.attributes.tagline}
+						onChange={(newValue) => {
+							props.setAttributes({tagline: newValue})
+						}}
+					/>
+					{!!imageSelected && (
+						<TextControl
+							label={__("Hover Text")}
+							value={props.attributes.hoverText}
+							onChange={(newValue) => {
+								props.setAttributes({hoverText: newValue})
+							}}
+						/>
+					)}
+				</PanelBody>
+			</InspectorControls>
+		</>
 	);
 }
