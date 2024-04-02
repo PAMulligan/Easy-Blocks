@@ -6,10 +6,10 @@ export const ImageThumbnail = (props) => {
 	return image?.source_url ? (
 		<img
 			style={{
+				margin: "0 auto",
 				display: "block",
-				height: props.height || 150,
-				width: "100%",
-				objectFit: "cover",
+				height: "auto",
+				width: "150px",
 			}}
 			onClick={props.onClick}
 			src={image.source_url}

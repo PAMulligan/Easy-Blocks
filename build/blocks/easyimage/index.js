@@ -495,9 +495,6 @@ _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_10__.config.autoAddCs
 function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
   const image = (0,_hooks_useImage__WEBPACK_IMPORTED_MODULE_8__.useImage)(props.attributes.imageId);
-  console.log({
-    image
-  });
   const imageSelected = !!props.attributes.imageId && !!image?.source_url;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
@@ -628,10 +625,10 @@ const ImageThumbnail = props => {
   const image = (0,_hooks_useImage__WEBPACK_IMPORTED_MODULE_1__.useImage)(props.imageId);
   return image?.source_url ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     style: {
+      margin: "0 auto",
       display: "block",
-      height: props.height || 150,
-      width: "100%",
-      objectFit: "cover"
+      height: "auto",
+      width: "150px"
     },
     onClick: props.onClick,
     src: image.source_url,

@@ -19,8 +19,6 @@ config.autoAddCss = false;
 export default function Edit(props) {
 	const blockProps = useBlockProps();
 	const image = useImage(props.attributes.imageId);
-
-	console.log({ image });
 	const imageSelected = !!props.attributes.imageId && !!image?.source_url;
 
 	return (

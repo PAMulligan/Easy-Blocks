@@ -1,11 +1,11 @@
 <?
-$block_wrapper_attributes = get_block_wrapper_attributes([
-  'style' => 'padding-left:10px;'
-]);
-if ($attributes['linkedPost'] ?? null) {
-  $post_uri = get_permalink($attributes['linkedPost']);
-}
+$block_wrapper_attributes = get_block_wrapper_attributes();
 ?>
-<a href="<? echo $post_uri ?? "#"; ?>" <? echo $block_wrapper_attributes; ?>>
-  <? echo $attributes['labelText'] ?>
-</a>
+<div <? echo $block_wrapper_attributes; ?>>
+  <div class="gallery-thumbnails">
+    <? echo $content; ?>
+  </div>
+  <div>
+    <img class="image-preview" />
+  </div>
+</div>
