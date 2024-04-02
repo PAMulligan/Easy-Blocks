@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "easyblocks/easy-image",
+	"version": "1.0.1",
+	"title": "Easy Image",
+	"category": "easyblocks",
+	"icon": "format-image",
+	"description": "An image for the Easy Gallery",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"imageId": {
+			"type": "number"
+		}
+	},
+	"parent": ["easyblocks/easy-gallery"],
+	"textdomain": "easyblocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

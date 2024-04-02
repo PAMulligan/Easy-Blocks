@@ -1,0 +1,18 @@
+.wp-block-easyblocks-easy-gallery {
+    padding: 40px;
+    background-color: #eee;
+    position: relative;
+    box-sizing: border-box;
+
+    .easy-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        padding: 8px;
+        background-color: #ddd;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+}

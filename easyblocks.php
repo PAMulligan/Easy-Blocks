@@ -33,6 +33,8 @@ final class EasyBlocks
             register_block_type( __DIR__ . '/build/blocks/easycurve' );
             register_block_type( __DIR__ . '/build/blocks/easygroup');
             register_block_type( __DIR__ . '/build/blocks/easybutton');
+            register_block_type( __DIR__ . '/build/blocks/easygallery');
+            register_block_type( __DIR__ . '/build/blocks/easyimage');
         });
     }
 
