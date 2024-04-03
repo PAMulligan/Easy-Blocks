@@ -34,4 +34,10 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .wp-block-easyblocks-easy-image {
+    width: unset;
+  }
+}
+
 /*# sourceMappingURL=style-index.css.map*/

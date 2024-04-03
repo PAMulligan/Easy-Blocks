@@ -6,4 +6,10 @@
   justify-content: space-around;
 }
 
+@media screen and (max-width: 767px) {
+  .wp-block-easyblocks-easy-gallery {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=style-index.css.map*/
