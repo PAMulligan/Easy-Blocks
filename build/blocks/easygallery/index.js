@@ -51,7 +51,7 @@ function Edit(props) {
     const block = getBlocksByClientId(props.clientId)?.[0];
     return block?.innerBlocks;
   }, [props.clientId]);
-  const [previewModeImage, setPreviewModeImage] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useState)({
+  const previewModeImage = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useState)({
     imageId: innerBlocks?.[0]?.attributes?.imageId,
     blockId: innerBlocks?.[0]?.clientId
   });
@@ -65,18 +65,20 @@ function Edit(props) {
     ...innerBlocksProps
   })), !editMode && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "preview-mode"
-  }, (innerBlocks || []).map(innerBlock => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_8__.ImageThumbnail, {
+  }, (innerBlocks || []).map(innerBlock => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "easy-gallery-image easy-gallery-hover-container"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_8__.ImageThumbnail, {
     key: innerBlock.clientId,
     imageId: innerBlock.attributes.imageId,
-    height: 75,
-    onClick: () => {
-      setPreviewModeImage({
-        imageId: innerBlock.attributes.imageId,
-        blockId: innerBlock.clientId
-      });
-    },
+    height: 150,
     className: `thumb ${innerBlock.clientId === previewModeImage.blockId ? "selected" : ""}`
-  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_8__.ImageThumbnail, {
+  }), !!innerBlock.attributes.hoverText && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "easy-gallery-overlay"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "easy-gallery-hover-text"
+  }, innerBlock.attributes.hoverText)), !!innerBlock.attributes.tagline && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "easy-gallery-tagline"
+  }, innerBlock.attributes.tagline)))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_8__.ImageThumbnail, {
     height: "initial",
     imageId: previewModeImage?.imageId
   })))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {

@@ -4,27 +4,35 @@
 .wp-block-easyblocks-easy-image {
   text-align: center;
 }
-.wp-block-easyblocks-easy-image .hover-container {
+.wp-block-easyblocks-easy-image .easy-gallery-hover-container {
   position: relative;
   height: 131px;
 }
-.wp-block-easyblocks-easy-image .hover-container .easy-gallery-hover-text {
-  position: relative;
-  visibility: hidden;
-  height: 100%;
-  padding-top: 25%;
-}
-.wp-block-easyblocks-easy-image .hover-container img {
+.wp-block-easyblocks-easy-image .easy-gallery-hover-container .easy-gallery-overlay {
   position: absolute;
   top: 0;
-  left: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #eee;
 }
-.wp-block-easyblocks-easy-image .hover-container:hover .easy-gallery-hover-text {
-  visibility: visible;
-  background-color: #ddd;
+.wp-block-easyblocks-easy-image .easy-gallery-hover-container .easy-gallery-overlay .easy-gallery-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 88%;
 }
-.wp-block-easyblocks-easy-image .hover-container:hover img {
+.wp-block-easyblocks-easy-image .easy-gallery-hover-container:hover img {
   display: none;
+}
+.wp-block-easyblocks-easy-image .easy-gallery-hover-container:hover .easy-gallery-overlay {
+  opacity: 1;
 }
 .wp-block-easyblocks-easy-image .easy-gallery-tagline {
   background-color: #ddd;

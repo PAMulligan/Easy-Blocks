@@ -22,6 +22,11 @@ final class EasyBlocks
 {
     static function init()
     {
+        add_action('enqueue_block_assets', function () {
+            wp_enqueue_style('dashicons');
+            $style_url = plugins_url("build/style-index.css", __FILE__);
+			wp_enqueue_style('easyblocks-style', $style_url, array());
+        });
         add_action('init', function() {
             add_filter('block_categories_all', function($categories) {
                 array_unshift($categories, [

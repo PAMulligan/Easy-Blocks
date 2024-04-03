@@ -12,6 +12,7 @@ import "./editor.scss";
 import { useImage } from "../../hooks/useImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPanorama } from "@fortawesome/free-solid-svg-icons";
+// The next three lines fix a bug, and must be added when using FA icons in any block
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
@@ -24,13 +25,7 @@ export default function Edit(props) {
 	return (
 		<>
 			<div {...blockProps}>
-				{!!imageSelected && !!props.attributes.hoverText && (
-					<div className="hover-container">
-						<p className="easy-gallery-hover-text">{props.attributes.hoverText}</p>
-						<ImageThumbnail imageId={props.attributes.imageId} />
-					</div>
-				)}
-				{!!imageSelected && !props.attributes.hoverText &&
+				{!!imageSelected &&
 					<ImageThumbnail imageId={props.attributes.imageId} />}
 				{!imageSelected && (
 					<div
@@ -43,9 +38,6 @@ export default function Edit(props) {
 					>
 						<FontAwesomeIcon icon={faPanorama} style={{ margin: "auto" }} />
 					</div>
-				)}
-				{!!props.attributes.tagline && (
-					<p className="easy-gallery-tagline">{props.attributes.tagline}</p>
 				)}
 				<MediaUploadCheck>
 					<MediaUpload

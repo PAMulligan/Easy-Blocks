@@ -486,6 +486,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// The next three lines fix a bug, and must be added when using FA icons in any block
 
 
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_9__.config.autoAddCss = false;
@@ -495,13 +496,7 @@ function Edit(props) {
   const imageSelected = !!props.attributes.imageId && !!image?.source_url;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
-  }, !!imageSelected && !!props.attributes.hoverText && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "hover-container"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "easy-gallery-hover-text"
-  }, props.attributes.hoverText), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_5__.ImageThumbnail, {
-    imageId: props.attributes.imageId
-  })), !!imageSelected && !props.attributes.hoverText && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_5__.ImageThumbnail, {
+  }, !!imageSelected && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_5__.ImageThumbnail, {
     imageId: props.attributes.imageId
   }), !imageSelected && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     style: {
@@ -515,9 +510,7 @@ function Edit(props) {
     style: {
       margin: "auto"
     }
-  })), !!props.attributes.tagline && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "easy-gallery-tagline"
-  }, props.attributes.tagline), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
     allowedTypes: ["image"],
     render: ({
       open
