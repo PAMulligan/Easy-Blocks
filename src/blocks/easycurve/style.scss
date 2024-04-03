@@ -7,7 +7,6 @@
 
  .wp-block-easyblocks-easycurve {
 	position: relative;
-	padding: 80px 50px;
 
 	.curve {
 		position: absolute;
@@ -28,10 +27,5 @@
 			top: 0;
 			left: 0;
 		}
-	}
-}
-@media screen and (max-width: 767px) {
-	.wp-block-easyblocks-easycurve {
-		padding: 80px 0 !important;
 	}
 }
