@@ -1,6 +1,6 @@
 .wp-block-easyblocks-easy-image {
     position: relative;
-    width: 180px;
+    width: 270px;
     box-sizing: border-box;
     text-align: center;
 
@@ -17,6 +17,7 @@
         background-color: #eee;
 
         .easy-gallery-hover-text {
+            font-size: 1.2rem;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -30,6 +31,7 @@
 
     .easy-gallery-tagline {
         background-color: #eee;
+        font-size: 1.2rem;
     }
 
     &:hover {

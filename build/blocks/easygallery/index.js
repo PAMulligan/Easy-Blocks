@@ -70,7 +70,7 @@ function Edit(props) {
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_imageThumbnail__WEBPACK_IMPORTED_MODULE_8__.ImageThumbnail, {
     key: innerBlock.clientId,
     imageId: innerBlock.attributes.imageId,
-    height: 150,
+    height: 270,
     className: `thumb ${innerBlock.clientId === previewModeImage.blockId ? "selected" : ""}`
   }), !!innerBlock.attributes.hoverText && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "easy-gallery-overlay"

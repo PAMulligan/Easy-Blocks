@@ -54,7 +54,7 @@ export default function Edit(props) {
 									<ImageThumbnail
 										key={innerBlock.clientId}
 										imageId={innerBlock.attributes.imageId}
-										height={150}
+										height={270}
 										className={`thumb ${
 											innerBlock.clientId === previewModeImage.blockId
 												? "selected"
