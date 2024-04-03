@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/easybutton/style-index.css","mappings":";;;AAAA;EACC;EACA;EACA;EACA;AACD,C","sources":["webpack://easyblocks/./src/blocks/easybutton/style.scss"],"sourcesContent":[".wp-block-easyblocks-easy-button.wp-block-easyblocks-easy-button {\n\ttext-decoration: none;\n\tbackground: black;\n\tpadding: 15px;\n\tcolor: white;\n}\n"],"names":[],"sourceRoot":""}

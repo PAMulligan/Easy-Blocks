@@ -4,7 +4,7 @@
  * Description:         Custom blocks for my portfolio
  * Requires at least:   6.1
  * Requires PHP:        7.0
- * Version:             1.1.1
+ * Version:             1.5.2
  * Author:              Paul Mulliganiel
  * Author URI:          https://github.com/PAMulligan
  * Text Domain:         easyblocks
