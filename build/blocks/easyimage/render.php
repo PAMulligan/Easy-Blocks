@@ -8,4 +8,16 @@ $image_uri_large = wp_get_attachment_image_url($attributes['imageId'] ?? 0, "lar
 ?>
 <div <? echo $block_wrapper_attributes; ?>>
   <img data-large-size="<? echo $image_uri_large; ?>" src="<? echo $image_uri; ?>" class="thumb" />
+  <? if ($attributes['hoverText']) : ?>    
+    <div class="easy-gallery-overlay">
+      <div class="easy-gallery-hover-text">
+        <?= $attributes['hoverText']; ?>
+      </div>
+    </div>
+  <?
+  endif;
+  if ($attributes['tagline']) :
+  ?>
+    <p class="easy-gallery-tagline"><?= $attributes['tagline']; ?></p>
+  <? endif; ?>
 </div>

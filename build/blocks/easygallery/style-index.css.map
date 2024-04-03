@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/easygallery/style-index.css","mappings":";;;AAAA;EACI;EACA;AACJ,C","sources":["webpack://easyblocks/./src/blocks/easygallery/style.scss"],"sourcesContent":[".wp-block-easyblocks-easy-gallery {\r\n    display: flex;\r\n    justify-content: space-around;\r\n}"],"names":[],"sourceRoot":""}
