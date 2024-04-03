@@ -30,4 +30,4 @@ node_modules/
 .env
 
 # Source directory
-src
+src/

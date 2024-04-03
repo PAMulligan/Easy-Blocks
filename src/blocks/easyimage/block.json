@@ -11,6 +11,9 @@
 		"html": false
 	},
 	"attributes": {
+		"isLink": {
+			"type": "boolean"
+		},
 		"imageId": {
 			"type": "number"
 		},
