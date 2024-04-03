@@ -2,7 +2,7 @@
 Author:            Paul Mulliganiel
 Tags:              block
 Tested up to:      6.1
-Stable tag:        1.0.1
+Stable tag:        1.5.2
 
 Custom blocks for any Gutenberg theme.
 
@@ -18,4 +18,10 @@ with any Gutenberg theme in mind.
 
 == Changelog ==
 
+= 1.5.2 = Styling for desktop and mobile
+= 1.5.1 = Added Easy Gallery block
+= 1.4.1 = Added Easy Image block
+= 1.3.1 = Added Easy Group block
+= 1.2.1 = Added Easy Button block
+= 1.1.1 = Removed Post Carousel block, added Easy Curve block
 = 1.0.1 = Added Post Carousel block
