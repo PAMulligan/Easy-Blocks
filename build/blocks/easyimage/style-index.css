@@ -3,11 +3,9 @@
   \********************************************************************************************************************************************************************************************************************************************************/
 .wp-block-easyblocks-easy-image {
   position: relative;
-  width: 150px;
+  width: 180px;
   box-sizing: border-box;
-}
-.wp-block-easyblocks-easy-image img {
-  max-height: 47%;
+  text-align: center;
 }
 .wp-block-easyblocks-easy-image .easy-gallery-overlay {
   position: absolute;
@@ -29,8 +27,8 @@
   text-align: center;
   width: 88%;
 }
-.wp-block-easyblocks-easy-image:hover img {
-  display: none;
+.wp-block-easyblocks-easy-image .easy-gallery-tagline {
+  background-color: #eee;
 }
 .wp-block-easyblocks-easy-image:hover .easy-gallery-overlay {
   opacity: 1;
