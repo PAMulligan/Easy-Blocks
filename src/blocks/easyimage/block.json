@@ -11,6 +11,14 @@
 		"html": false
 	},
 	"attributes": {
+		"isLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": "#"
+		},
 		"imageId": {
 			"type": "number"
 		},
