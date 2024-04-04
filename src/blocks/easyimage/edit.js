@@ -2,10 +2,16 @@ import {
 	useBlockProps,
 	MediaUploadCheck,
 	MediaUpload,
-	InspectorControls
+	InspectorControls,
+	RichText
 } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
-import { PanelBody, TextControl } from "@wordpress/components";
+import {
+	PanelBody,
+	TextControl,
+	ToggleControl
+} from "@wordpress/components";
+import { useState } from 'react';
 import metadata from "./block.json";
 import { ImageThumbnail } from "../../components/imageThumbnail";
 import "./editor.scss";
@@ -21,6 +27,8 @@ export default function Edit(props) {
 	const blockProps = useBlockProps();
 	const image = useImage(props.attributes.imageId);
 	const imageSelected = !!props.attributes.imageId && !!image?.source_url;
+	const [linkUrl, setLinkUrl] = useState(props.attributes.linkUrl);
+	const [isLink, setIsLink] = useState(props.attributes.isLink);
 
 	return (
 		<>
@@ -61,6 +69,37 @@ export default function Edit(props) {
 				</MediaUploadCheck>
 			</div>
 			<InspectorControls>
+				<PanelBody title={__("Is this a link?")}>
+					<ToggleControl
+						help={
+							isLink
+								? __("Is a link")
+								: __("Isn't a link")
+						}
+						value={props.attributes.isLink}
+						checked={isLink}
+						onChange={(newValue) => {
+							props.setAttributes({isLink: newValue});
+							setIsLink(newValue);
+						}}
+					/>
+					{!!isLink && 
+						<RichText
+							placeholder="Link URL"
+							value={props.attributes.linkUrl}
+							allowedFormats={[]}
+							multiline={false}
+							onSplit={() => {}}
+							onReplace={() => {}}
+							onChange={(newValue) => {
+								props.setAttributes({
+									linkUrl: newValue,
+								});
+								setLinkUrl(newValue);
+							}}
+						/>
+					}
+				</PanelBody>
 				<PanelBody title={__("Text", metadata.textdomain)}>
 					<TextControl
 						label={__("Tagline")}
