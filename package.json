@@ -1,6 +1,6 @@
 {
 	"name": "easyblocks",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"description": "Custom blocks for my portfolio",
 	"author": "Paul Mulliganiel",
 	"main": "build/index.js",

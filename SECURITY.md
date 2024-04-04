@@ -6,6 +6,7 @@
 | ------- | ------------------ |
 | 1.0.1   | :white_check_mark: |
 | 1.5.2   | :white_check_mark: |
+| 1.5.3   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 

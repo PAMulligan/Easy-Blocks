@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/easygroup/index.css","mappings":";;;AAAA;EACC;EACA;AACD,C","sources":["webpack://easyblocks/./src/blocks/easygroup/editor.scss"],"sourcesContent":[".wp-block-easyblocks-easy-group {\n\tpadding: 40px;\n\tborder: 1px solid red;\n}\n"],"names":[],"sourceRoot":""}

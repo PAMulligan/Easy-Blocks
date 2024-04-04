@@ -2,7 +2,7 @@
 Author:            Paul Mulliganiel
 Tags:              block
 Tested up to:      6.1
-Stable tag:        1.5.2
+Stable tag:        1.5.3
 
 Custom blocks for any Gutenberg theme.
 
@@ -18,6 +18,7 @@ with any Gutenberg theme in mind.
 
 == Changelog ==
 
+= 1.5.3 = Add link functionality to Easy Gallery
 = 1.5.2 = Styling for desktop and mobile
 = 1.5.1 = Added Easy Gallery block
 = 1.4.1 = Added Easy Image block
