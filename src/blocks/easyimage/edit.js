@@ -2,7 +2,8 @@ import {
 	useBlockProps,
 	MediaUploadCheck,
 	MediaUpload,
-	InspectorControls
+	InspectorControls,
+	RichText
 } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 import {
@@ -26,6 +27,7 @@ export default function Edit(props) {
 	const blockProps = useBlockProps();
 	const image = useImage(props.attributes.imageId);
 	const imageSelected = !!props.attributes.imageId && !!image?.source_url;
+	const [linkUrl, setLinkUrl] = useState(props.attributes.linkUrl);
 	const [isLink, setIsLink] = useState(props.attributes.isLink);
 
 	return (
@@ -81,6 +83,22 @@ export default function Edit(props) {
 							setIsLink(newValue);
 						}}
 					/>
+					{!!isLink && 
+						<RichText
+							placeholder="Link URL"
+							value={props.attributes.linkUrl}
+							allowedFormats={[]}
+							multiline={false}
+							onSplit={() => {}}
+							onReplace={() => {}}
+							onChange={(newValue) => {
+								props.setAttributes({
+									linkUrl: newValue,
+								});
+								setLinkUrl(newValue);
+							}}
+						/>
+					}
 				</PanelBody>
 				<PanelBody title={__("Text", metadata.textdomain)}>
 					<TextControl

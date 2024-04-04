@@ -495,6 +495,7 @@ function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
   const image = (0,_hooks_useImage__WEBPACK_IMPORTED_MODULE_7__.useImage)(props.attributes.imageId);
   const imageSelected = !!props.attributes.imageId && !!image?.source_url;
+  const [linkUrl, setLinkUrl] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(props.attributes.linkUrl);
   const [isLink, setIsLink] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(props.attributes.isLink);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
@@ -539,6 +540,19 @@ function Edit(props) {
         isLink: newValue
       });
       setIsLink(newValue);
+    }
+  }), !!isLink && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    placeholder: "Link URL",
+    value: props.attributes.linkUrl,
+    allowedFormats: [],
+    multiline: false,
+    onSplit: () => {},
+    onReplace: () => {},
+    onChange: newValue => {
+      props.setAttributes({
+        linkUrl: newValue
+      });
+      setLinkUrl(newValue);
     }
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Text", _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain)
@@ -16463,7 +16477,7 @@ var icons = {
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"easyblocks/easy-image","version":"1.0.1","title":"Easy Image","category":"easyblocks","icon":"format-image","description":"An image for the Easy Gallery","supports":{"html":false},"attributes":{"isLink":{"type":"boolean"},"imageId":{"type":"number"},"tagline":{"type":"string"},"hoverText":{"type":"string"}},"parent":["easyblocks/easy-gallery"],"textdomain":"easyblocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"easyblocks/easy-image","version":"1.0.1","title":"Easy Image","category":"easyblocks","icon":"format-image","description":"An image for the Easy Gallery","supports":{"html":false},"attributes":{"isLink":{"type":"boolean","default":false},"linkUrl":{"type":"string","default":"#"},"imageId":{"type":"number"},"tagline":{"type":"string"},"hoverText":{"type":"string"}},"parent":["easyblocks/easy-gallery"],"textdomain":"easyblocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
