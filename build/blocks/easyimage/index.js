@@ -449,6 +449,46 @@ var convertCurry = convert.bind(null, (react__WEBPACK_IMPORTED_MODULE_1___defaul
 
 /***/ }),
 
+/***/ "./src/blocks/easyimage/assets/icon.svg":
+/*!**********************************************!*\
+  !*** ./src/blocks/easyimage/assets/icon.svg ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgIcon),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgIcon = function SvgIcon(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlSpace: "preserve",
+    width: 800,
+    height: 800,
+    viewBox: "0 0 32 32"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M7.344 9 1 15.344V13.93L5.93 9zM1.93 9 1 9.93v1.414L3.344 9zm11-3L1 17.93v1.414L14.344 6zm4 0L1 21.93v1.414L18.344 6zM10 17.5q.001-.307.035-.606L1 25.93V27h.344l8.718-8.718A5.5 5.5 0 0 1 10 17.5m10.679-1.835L27.344 9H25.93l-5.703 5.703q.271.456.452.962M15.5 12c.266 0 .526.025.782.062l4.656-4.656-.566-.848-5.477 5.477q.298-.034.605-.035m3.543 1.3 4.3-4.3H22l-.028-.042-3.762 3.762q.445.252.833.58M29.93 9l-8.953 8.953a5.4 5.4 0 0 1-.538 1.952L30 10.344V9zm-4.586 18L30 22.344V20.93L23.93 27zm-4 0L30 18.344V16.93L19.93 27zm-4 0L30 14.344V12.93L15.93 27zm-6.624-6.79L3.93 27h1.414l5.957-5.957a5.4 5.4 0 0 1-.581-.833m1.983 2.017L7.93 27h1.414l4.321-4.321a5.5 5.5 0 0 1-.962-.452m3.25.75L11.93 27h1.414l4.561-4.561a5.5 5.5 0 0 1-1.952.538M29.344 27l.656-.656V24.93L27.93 27z",
+    style: {
+      fill: "#ffc5bb"
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M30 8h-7.465l-1.703-2.555A1 1 0 0 0 20 5h-9a1 1 0 0 0-.832.445L8.465 8H8V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h29a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1M2 6h5v2H2zm28 21H1V9h8l2-3h9l2 3h8zm-10-9.5c0 2.453-2.015 4.5-4.5 4.5S11 19.985 11 17.5s1.969-4.5 4.5-4.5 4.5 2.047 4.5 4.5m-10 0c0 3.033 2.467 5.5 5.5 5.5s5.5-2.467 5.5-5.5-2.438-5.5-5.5-5.5a5.487 5.487 0 0 0-5.5 5.5",
+    style: {
+      fill: "#265aa5"
+    }
+  }));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iVXBsb2FkZWQgdG8gc3ZncmVwby5jb20iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5oYXRjaF9lZW57ZmlsbDojMjY1QUE1O30NCgkuaGF0Y2hfdHdlZXtmaWxsOiNGRkM1QkI7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwYXRoIGNsYXNzPSJoYXRjaF90d2VlIiBkPSJNNy4zNDQsOUwxLDE1LjM0NFYxMy45M0w1LjkzLDlINy4zNDR6IE0xLjkzLDlMMSw5LjkzdjEuNDE0TDMuMzQ0LDlIMS45M3ogTTEyLjkzLDZMMSwxNy45M3YxLjQxNA0KCQlMMTQuMzQ0LDZIMTIuOTN6IE0xNi45Myw2TDEsMjEuOTN2MS40MTRMMTguMzQ0LDZIMTYuOTN6IE0xMCwxNy41YzAtMC4yMDUsMC4wMTMtMC40MDYsMC4wMzUtMC42MDZMMSwyNS45M1YyN2gwLjM0NGw4LjcxOC04LjcxOA0KCQlDMTAuMDI1LDE4LjAyNiwxMCwxNy43NjYsMTAsMTcuNXogTTIwLjY3OSwxNS42NjVMMjcuMzQ0LDlIMjUuOTNsLTUuNzAzLDUuNzAzQzIwLjQwNywxNS4wMDYsMjAuNTU5LDE1LjMyOCwyMC42NzksMTUuNjY1eg0KCQkgTTE1LjUsMTJjMC4yNjYsMCwwLjUyNiwwLjAyNSwwLjc4MiwwLjA2Mmw0LjY1Ni00LjY1NmwtMC41NjYtMC44NDhsLTUuNDc3LDUuNDc3QzE1LjA5NCwxMi4wMTMsMTUuMjk1LDEyLDE1LjUsMTJ6IE0xOS4wNDMsMTMuMw0KCQlsNC4zLTQuM0gyMmwtMC4wMjgtMC4wNDJMMTguMjEsMTIuNzJDMTguNTA2LDEyLjg4OCwxOC43ODUsMTMuMDgyLDE5LjA0MywxMy4zeiBNMjkuOTMsOWwtOC45NTMsOC45NTMNCgkJYy0wLjA1NywwLjY5Ni0wLjI0NSwxLjM1NC0wLjUzOCwxLjk1MkwzMCwxMC4zNDRWOUgyOS45M3ogTTI1LjM0NCwyN0wzMCwyMi4zNDRWMjAuOTNMMjMuOTMsMjdIMjUuMzQ0eiBNMjEuMzQ0LDI3TDMwLDE4LjM0NA0KCQlWMTYuOTNMMTkuOTMsMjdIMjEuMzQ0eiBNMTcuMzQ0LDI3TDMwLDE0LjM0NFYxMi45M0wxNS45MywyN0gxNy4zNDR6IE0xMC43MiwyMC4yMUwzLjkzLDI3aDEuNDE0bDUuOTU3LTUuOTU3DQoJCUMxMS4wODIsMjAuNzg1LDEwLjg4OCwyMC41MDYsMTAuNzIsMjAuMjF6IE0xMi43MDMsMjIuMjI3TDcuOTMsMjdoMS40MTRsNC4zMjEtNC4zMjFDMTMuMzI4LDIyLjU1OSwxMy4wMDYsMjIuNDA3LDEyLjcwMywyMi4yMjd6DQoJCSBNMTUuOTUzLDIyLjk3N0wxMS45MywyN2gxLjQxNGw0LjU2MS00LjU2MUMxNy4zMDYsMjIuNzMyLDE2LjY0OCwyMi45MiwxNS45NTMsMjIuOTc3eiBNMjkuMzQ0LDI3TDMwLDI2LjM0NFYyNC45M0wyNy45MywyNw0KCQlIMjkuMzQ0eiIvPg0KCTxwYXRoIGNsYXNzPSJoYXRjaF9lZW4iIGQ9Ik0zMCw4aC03LjQ2NWwtMS43MDMtMi41NTVDMjAuNjQ3LDUuMTY3LDIwLjMzNCw1LDIwLDVoLTljLTAuMzM0LDAtMC42NDcsMC4xNjctMC44MzIsMC40NDVMOC40NjUsOEg4VjYNCgkJYzAtMC41NTItMC40NDgtMS0xLTFIMkMxLjQ0OCw1LDEsNS40NDgsMSw2djJDMC40NDgsOCwwLDguNDQ4LDAsOXYxOGMwLDAuNTUyLDAuNDQ4LDEsMSwxaDI5YzAuNTUyLDAsMS0wLjQ0OCwxLTFWOQ0KCQlDMzEsOC40NDgsMzAuNTUyLDgsMzAsOHogTTIsNmg1djJIMlY2eiBNMzAsMjdIMVY5aDhsMi0zaDlsMiwzaDhWMjd6IE0yMCwxNy41YzAsMi40NTMtMi4wMTUsNC41LTQuNSw0LjVTMTEsMTkuOTg1LDExLDE3LjUNCgkJczEuOTY5LTQuNSw0LjUtNC41UzIwLDE1LjA0NywyMCwxNy41eiBNMTAsMTcuNWMwLDMuMDMzLDIuNDY3LDUuNSw1LjUsNS41czUuNS0yLjQ2Nyw1LjUtNS41UzE4LjU2MiwxMiwxNS41LDEyDQoJCUMxMi40MzcsMTIsMTAsMTQuNDY3LDEwLDE3LjV6Ii8+DQo8L2c+DQo8L3N2Zz4=");
+
+/***/ }),
+
 /***/ "./src/blocks/easyimage/edit.js":
 /*!**************************************!*\
   !*** ./src/blocks/easyimage/edit.js ***!
@@ -585,12 +625,16 @@ function Edit(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/easyimage/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/easyimage/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/blocks/easyimage/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/easyimage/block.json");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/easyimage/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/easyimage/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/easyimage/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/blocks/easyimage/block.json");
+/* harmony import */ var _assets_icon_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon.svg */ "./src/blocks/easyimage/assets/icon.svg");
+
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -614,20 +658,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Every block starts by registering a new block type definition.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_5__.name, {
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
   /**
    * @see ./save.js
    */
-  save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"],
+  icon: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _assets_icon_svg__WEBPACK_IMPORTED_MODULE_6__["default"]
+  })
 });
 
 /***/ }),

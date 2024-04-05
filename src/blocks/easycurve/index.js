@@ -44,7 +44,6 @@ registerBlockType(metadata.name, {
 				type: "block",
 				blocks: ["core/paragraph"],
 				transform: (attributes) => {
-					//console.log({ data });
 					return createBlock("easyblocks/easycurve", {}, [
 						createBlock("core/paragraph", attributes),
 					]);
@@ -54,7 +53,6 @@ registerBlockType(metadata.name, {
 				type: "block",
 				blocks: ["core/heading"],
 				transform: (attributes) => {
-					//console.log({ data });
 					return createBlock("easyblocks/easycurve", {}, [
 						createBlock("core/heading", attributes),
 					]);

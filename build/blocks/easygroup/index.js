@@ -1,1 +1,430 @@
-(()=>{"use strict";var M,N={906:()=>{const M=window.React,N=window.wp.blocks,T=window.wp.blockEditor,I=JSON.parse('{"UU":"easyblocks/easy-group"}');(0,N.registerBlockType)(I.UU,{edit:function(N){console.log({props:N});const I=0===(g=N.attributes.style?.spacing?.blockGap||"").indexOf("var:")?`var(--wp--${g.split(":")[1].split("|").join("--")})`:g,D=(0,T.useBlockProps)({style:{gap:I,justifyContent:N.attributes.justifyContent}}),j=(0,T.useInnerBlocksProps)(D,{template:[["easyblocks/easy-button",{}]],allowedBlocks:["easyblocks/easy-button"]});var g;return(0,M.createElement)(M.Fragment,null,(0,M.createElement)(T.BlockControls,null,(0,M.createElement)(T.JustifyContentControl,{value:N.attributes.justifyContent,allowedControls:["left","center","right"],onChange:M=>{N.setAttributes({justifyContent:M})}})),(0,M.createElement)("div",{...j}))},save:function(){const M=T.useBlockProps.save(),{children:N}=T.useInnerBlocksProps.save(M);return N},icon:(0,M.createElement)("img",{src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIHpvb21BbmRQYW49Im1hZ25pZnkiIHZpZXdCb3g9IjAgMCAzNzUgMzc0Ljk5OTk5MSIgaGVpZ2h0PSIyNCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCIgdmVyc2lvbj0iMS4wIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImZhNzE0Yjg5ZDgiPjxwYXRoIGQ9Ik0gMTM3LjkzMzU5NCAxMzcuOTMzNTk0IEwgMzc0LjkzMzU5NCAxMzcuOTMzNTk0IEwgMzc0LjkzMzU5NCAzNzQuOTMzNTk0IEwgMTM3LjkzMzU5NCAzNzQuOTMzNTk0IFogTSAxMzcuOTMzNTk0IDEzNy45MzM1OTQgIiBjbGlwLXJ1bGU9Im5vbnplcm8iLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iMjEyZWJkNGU3YSI+PHBhdGggZD0iTSAxMzcuOTMzNTk0IDI1NiBMIDEzOCAyNTYgTCAxMzggMjU5IEwgMTM3LjkzMzU5NCAyNTkgWiBNIDEzNy45MzM1OTQgMjU2ICIgY2xpcC1ydWxlPSJub256ZXJvIi8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9ImU5NDc4NTJjYzMiPjxwYXRoIGQ9Ik0gMTM3LjkzMzU5NCAxODUgTCAyOTAgMTg1IEwgMjkwIDM3MyBMIDEzNy45MzM1OTQgMzczIFogTSAxMzcuOTMzNTk0IDE4NSAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSIyMWQyMDA4NmNiIj48cGF0aCBkPSJNIDAgMCBMIDIzNyAwIEwgMjM3IDIzNyBMIDAgMjM3IFogTSAwIDAgIiBjbGlwLXJ1bGU9Im5vbnplcm8iLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjZmE3MTRiODlkOCkiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0gMzc0LjkzMzU5NCAyNTYuNDMzNTk0IEMgMzc0LjkzMzU5NCAzMjEuODgyODEyIDMyMS44ODI4MTIgMzc0LjkzMzU5NCAyNTYuNDM3NSAzNzQuOTMzNTk0IEMgMTkwLjk4ODI4MSAzNzQuOTMzNTk0IDEzNy45MzM1OTQgMzIxLjg4MjgxMiAxMzcuOTMzNTk0IDI1Ni40MzM1OTQgQyAxMzcuOTMzNTk0IDE5MC45ODgyODEgMTkwLjk4ODI4MSAxMzcuOTMzNTk0IDI1Ni40Mzc1IDEzNy45MzM1OTQgQyAzMjEuODgyODEyIDEzNy45MzM1OTQgMzc0LjkzMzU5NCAxOTAuOTg4MjgxIDM3NC45MzM1OTQgMjU2LjQzMzU5NCAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjxnIGNsaXAtcGF0aD0idXJsKCMyMTJlYmQ0ZTdhKSI+PHBhdGggZmlsbD0iI2QyZDJkMiIgZD0iTSAxMzcuOTQ5MjE5IDI1OC40ODA0NjkgTCAxMzcuOTQ5MjE5IDI1OC40Njg3NSBMIDEzNy45NDkyMTkgMjU4LjQ4MDQ2OSBNIDEzNy45NDkyMTkgMjU4LjM5ODQzOCBMIDEzNy45NDkyMTkgMjU4LjM3ODkwNiBMIDEzNy45NDkyMTkgMjU4LjM5ODQzOCBNIDEzNy45NDkyMTkgMjU4LjMxMjUgTCAxMzcuOTQ5MjE5IDI1OC4yOTI5NjkgTCAxMzcuOTQ5MjE5IDI1OC4zMTI1IE0gMTM3Ljk0MTQwNiAyNTguMjI2NTYyIEwgMTM3Ljk0MTQwNiAyNTguMTk5MjE5IEwgMTM3Ljk0MTQwNiAyNTguMjI2NTYyIE0gMTM3Ljk0MTQwNiAyNTguMTQwNjI1IEwgMTM3Ljk0MTQwNiAyNTguMTEzMjgxIEwgMTM3Ljk0MTQwNiAyNTguMTQwNjI1IE0gMTM3Ljk0MTQwNiAyNTguMDUwNzgxIEwgMTM3Ljk0MTQwNiAyNTguMDMxMjUgTCAxMzcuOTQxNDA2IDI1OC4wNTA3ODEgTSAxMzcuOTQxNDA2IDI1Ny45MDYyNSBMIDEzNy45NDE0MDYgMjU3Ljg3NSBMIDEzNy45NDE0MDYgMjU3LjkwNjI1IE0gMTM3Ljk0MTQwNiAyNTcuODI0MjE5IEwgMTM3Ljk0MTQwNiAyNTcuNzg5MDYyIEwgMTM3Ljk0MTQwNiAyNTcuODI0MjE5IE0gMTM3Ljk0MTQwNiAyNTcuNzM4MjgxIEwgMTM3Ljk0MTQwNiAyNTcuNjk1MzEyIEwgMTM3Ljk0MTQwNiAyNTcuNzM4MjgxIE0gMTM3Ljk0MTQwNiAyNTcuNjQ4NDM4IEwgMTM3Ljk0MTQwNiAyNTcuNjA1NDY5IEwgMTM3Ljk0MTQwNiAyNTcuNjQ4NDM4IE0gMTM3Ljk0MTQwNiAyNTcuNTYyNSBMIDEzNy45NDE0MDYgMjU3LjUxNTYyNSBMIDEzNy45NDE0MDYgMjU3LjU2MjUgTSAxMzcuOTMzNTk0IDI1Ny40Njg3NSBMIDEzNy45MzM1OTQgMjU3LjQyMTg3NSBMIDEzNy45MzM1OTQgMjU3LjQ2ODc1IE0gMTM3LjkzMzU5NCAyNTcuMzc4OTA2IEwgMTM3LjkzMzU5NCAyNTcuMzI4MTI1IEwgMTM3LjkzMzU5NCAyNTcuMzc4OTA2IE0gMTM3LjkzMzU5NCAyNTcuMjkyOTY5IEwgMTM3LjkzMzU5NCAyNTcuMjE4NzUgTCAxMzcuOTMzNTk0IDI1Ny4yOTI5NjkgTSAxMzcuOTMzNTk0IDI1Ny4xOTE0MDYgTCAxMzcuOTMzNTk0IDI1Ny4xMDkzNzUgTCAxMzcuOTMzNTk0IDI1Ny4xOTE0MDYgTSAxMzcuOTMzNTk0IDI1Ny4wNzgxMjUgTCAxMzcuOTMzNTk0IDI1Ny4wMTk1MzEgTCAxMzcuOTMzNTk0IDI1Ny4wNzgxMjUgTSAxMzcuOTMzNTk0IDI1Ni45ODQzNzUgTCAxMzcuOTMzNTk0IDI1Ni45MjU3ODEgTCAxMzcuOTMzNTk0IDI1Ni45ODQzNzUgTSAxMzcuOTMzNTk0IDI1Ni44OTA2MjUgTCAxMzcuOTMzNTk0IDI1Ni44MzU5MzggTCAxMzcuOTMzNTk0IDI1Ni44OTA2MjUgTSAxMzcuOTMzNTk0IDI1Ni43OTY4NzUgTCAxMzcuOTMzNTk0IDI1Ni43NDIxODggTCAxMzcuOTMzNTk0IDI1Ni43OTY4NzUgTSAxMzcuOTMzNTk0IDI1Ni43MDcwMzEgTCAxMzcuOTMzNTk0IDI1Ni42NTIzNDQgTCAxMzcuOTMzNTk0IDI1Ni43MDcwMzEgTSAxMzcuOTMzNTk0IDI1Ni42MTcxODggTCAxMzcuOTMzNTk0IDI1Ni41NTA3ODEgTCAxMzcuOTMzNTk0IDI1Ni42MTcxODggTSAxMzcuOTMzNTk0IDI1Ni41MjM0MzggTCAxMzcuOTMzNTk0IDI1Ni40MzM1OTQgTCAxMzcuOTMzNTk0IDI1Ni41MjM0MzggIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48ZyBjbGlwLXBhdGg9InVybCgjZTk0Nzg1MmNjMykiPjxwYXRoIGZpbGw9IiM1NDU0NTQiIGQ9Ik0gMjM1LjAwMzkwNiAzNzIuOTYwOTM4IEMgMTgwLjQ0NTMxMiAzNjIuOTkyMTg4IDEzOC45MjE4NzUgMzE1LjY5MTQwNiAxMzcuOTQ5MjE5IDI1OC40ODA0NjkgTCAxMzcuOTQ5MjE5IDI1OC4yOTI5NjkgQyAxMzcuOTQxNDA2IDI1OC4yNjU2MjUgMTM3Ljk0MTQwNiAyNTguMjUgMTM3Ljk0MTQwNiAyNTguMjI2NTYyIEwgMTM3Ljk0MTQwNiAyNTguMDMxMjUgQyAxMzcuOTQxNDA2IDI1Ny45OTIxODggMTM3Ljk0MTQwNiAyNTcuOTQ5MjE5IDEzNy45NDE0MDYgMjU3LjkwNjI1IEwgMTM3Ljk0MTQwNiAyNTcuNTE1NjI1IEMgMTM3Ljk0MTQwNiAyNTcuNDk2MDk0IDEzNy45NDE0MDYgMjU3LjQ4ODI4MSAxMzcuOTMzNTk0IDI1Ny40Njg3NSBMIDEzNy45MzM1OTQgMjU2LjQzMzU5NCBDIDEzNy45MzM1OTQgMjU0LjMwMDc4MSAxMzcuOTk2MDk0IDI1Mi4xNzk2ODggMTM4LjEwMTU2MiAyNTAuMDc4MTI1IEwgMjI1LjE5MTQwNiAxODUuMjUgTCAyODkuMzk0NTMxIDMzMi4xOTkyMTkgTCAyMzUuMDAzOTA2IDM3Mi45NjA5MzggIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDI5Ni41NzgxMjUgMjI5LjI5Mjk2OSBMIDI5MC4zNTkzNzUgMjI5LjMyNDIxOSBMIDI5MC41MTU2MjUgMjQ3Ljc5Mjk2OSBMIDI4NS4xMzI4MTIgMjQ3Ljc5Mjk2OSBMIDI4NS4xMzI4MTIgMjI0IEwgMjcwLjUyMzQzOCAyMjQgTCAyNzAuNTIzNDM4IDI0Ny44Mzk4NDQgTCAyNjUuMTM2NzE5IDI0Ny44Mzk4NDQgTCAyNjQuODAwNzgxIDIxOC41ODk4NDQgTCAyNTAuNTIzNDM4IDIxOC42MTcxODggTCAyNTAuNTIzNDM4IDI0Ny44Mzk4NDQgTCAyNDUuMTM2NzE5IDI0Ny44Mzk4NDQgTCAyNDUuMTM2NzE5IDE4NS40MDIzNDQgTCAyMzAuNjEzMjgxIDE4NC45MTc5NjkgTCAyMzAuNDgwNDY5IDI2My43OTI5NjkgTCAyMjUuMDk3NjU2IDI2My43OTI5NjkgTCAyMjUuMDk3NjU2IDI1MS40ODQzNzUgTCAyMTkuODg2NzE5IDI1MS40ODQzNzUgTCAyMTkuOTA2MjUgMjQ2LjIxODc1IEwgMjE0LjQyOTY4OCAyNDUuOTM3NSBMIDIxNC40Mjk2ODggMjQwLjU1MDc4MSBMIDIwNC4zMzIwMzEgMjQwLjg2MzI4MSBMIDIwNC4zMzIwMzEgMjUxLjI1NzgxMiBMIDIwNC4yMjY1NjIgMjU2LjYwMTU2MiBMIDIwOS43MTQ4NDQgMjU2LjYzNjcxOSBMIDIwOS43MTQ4NDQgMjY3LjI5Mjk2OSBMIDIxNS4xMDE1NjIgMjY3LjQwMjM0NCBMIDIxNS4xMDE1NjIgMjc3LjQ2ODc1IEwgMjIwLjQ4NDM3NSAyNzguMTcxODc1IEwgMjIwLjQ4NDM3NSAyODguMTc5Njg4IEwgMjI1Ljg2MzI4MSAyODguOTg4MjgxIEwgMjI1Ljg2MzI4MSAyOTkuMDU0Njg4IEwgMjMxLjI0NjA5NCAyOTkuNzUgTCAyMzEuMjQ2MDk0IDMwOS43NjE3MTkgTCAyMzYuNjM2NzE5IDMxMC41MTk1MzEgTCAyMzYuNjM2NzE5IDMyNi42MjUgTCAyOTEuMTkxNDA2IDMyNi42MjUgTCAyOTEuMTkxNDA2IDMxMC43OTI5NjkgTCAyOTYuNTc4MTI1IDMxMC42MjUgTCAyOTYuNTc4MTI1IDI3OC41NTQ2ODggTCAzMDEuMDY2NDA2IDI3OC41NTQ2ODggTCAzMDEuMDY2NDA2IDIzNC42NjAxNTYgTCAyOTYuNTc4MTI1IDIzNC43MTg3NSBMIDI5Ni41NzgxMjUgMjI5LjI5Mjk2OSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZmlsbD0iIzczNzM3MyIgZD0iTSAyODQuNjM2NzE5IDIyMy43MTQ4NDQgTCAyODQuNjM2NzE5IDIxOC4zNzg5MDYgTCAyNjQuNjQwNjI1IDIxOC4zNzg5MDYgTCAyNjQuNjQwNjI1IDI0Ny42MDU0NjkgTCAyNzAuMDI3MzQ0IDI0Ny42MDU0NjkgTCAyNzAuMDI3MzQ0IDIyMy43NjE3MTkgTCAyODQuNjM2NzE5IDIyMy43NjE3MTkgTCAyODQuNjM2NzE5IDI0Ny41NTg1OTQgTCAyOTAuMDE5NTMxIDI0Ny41NTg1OTQgTCAyOTAuMDE5NTMxIDIyOS4wOTM3NSBMIDI5Ni4wNzgxMjUgMjI5LjA5Mzc1IEwgMjk2LjA3ODEyNSAyMjMuNzE0ODQ0IEwgMjg0LjYzNjcxOSAyMjMuNzE0ODQ0IE0gMjk2LjA3ODEyNSAzMTAuNTU0Njg4IEwgMzAxLjQ2MDkzOCAzMTAuNTU0Njg4IEwgMzAxLjQ2MDkzOCAyNzguMzE2NDA2IEwgMjk2LjA3ODEyNSAyNzguMzE2NDA2IEwgMjk2LjA3ODEyNSAzMTAuNTU0Njg4IE0gMjk2LjA3ODEyNSAyMjkuMDkzNzUgTCAyOTYuMDc4MTI1IDIzNC40ODA0NjkgTCAzMDEuNDYwOTM4IDIzNC40ODA0NjkgTCAzMDEuNDYwOTM4IDIyOS4wOTM3NSBMIDI5Ni4wNzgxMjUgMjI5LjA5Mzc1IE0gMzAxLjQ2MDkzOCAyMzQuNDgwNDY5IEwgMzAxLjQ2MDkzOCAyNzguMzE2NDA2IEwgMzA2LjgzOTg0NCAyNzguMzE2NDA2IEwgMzA2LjgzOTg0NCAyMzQuNDgwNDY5IEwgMzAxLjQ2MDkzOCAyMzQuNDgwNDY5IE0gMjEzLjkzMzU5NCAyNDAuMzEyNSBMIDIxMy45MzM1OTQgMjQ1LjcwMzEyNSBMIDIxOS4zMTY0MDYgMjQ1LjcwMzEyNSBMIDIxOS4zMTY0MDYgMjQwLjMxMjUgTCAyMTMuOTMzNTk0IDI0MC4zMTI1IE0gMjE0LjYwMTU2MiAyNzcuOTMzNTk0IEwgMjE0LjYwMTU2MiAyODguNjk5MjE5IEwgMjE5Ljk4ODI4MSAyODguNjk5MjE5IEwgMjE5Ljk4ODI4MSAyNzcuOTMzNTk0IEwgMjE0LjYwMTU2MiAyNzcuOTMzNTk0IE0gMjE5Ljk4ODI4MSAyODguNzUgTCAyMTkuOTg4MjgxIDI5OS41MTE3MTkgTCAyMjUuMzY3MTg4IDI5OS41MTE3MTkgTCAyMjUuMzY3MTg4IDI4OC43NSBMIDIxOS45ODgyODEgMjg4Ljc1IE0gMjI1LjM2NzE4OCAyOTkuNTExNzE5IEwgMjI1LjM2NzE4OCAzMTAuMjgxMjUgTCAyMzAuNzUgMzEwLjI4MTI1IEwgMjMwLjc1IDI5OS41MTE3MTkgTCAyMjUuMzY3MTg4IDI5OS41MTE3MTkgTSAyMDkuMjE4NzUgMjY3LjE2NDA2MiBMIDIwOS4yMTg3NSAyNzcuOTMzNTk0IEwgMjE0LjYwMTU2MiAyNzcuOTMzNTk0IEwgMjE0LjYwMTU2MiAyNjcuMTY0MDYyIEwgMjA5LjIxODc1IDI2Ny4xNjQwNjIgTSAyMDMuODM1OTM4IDI1Ni40MDIzNDQgTCAyMDMuODM1OTM4IDI2Ny4xNjQwNjIgTCAyMDkuMjE4NzUgMjY3LjE2NDA2MiBMIDIwOS4yMTg3NSAyNTYuNDAyMzQ0IEwgMjAzLjgzNTkzOCAyNTYuNDAyMzQ0IE0gMjAzLjgzNTkzOCAyNTEuMDE5NTMxIEwgMjAzLjgzNTkzOCAyNDAuNDgwNDY5IEwgMTk4LjQ1MzEyNSAyNDAuNDgwNDY5IEwgMTk4LjQ1MzEyNSAyNTYuNDAyMzQ0IEwgMjAzLjgzNTkzOCAyNTYuNDAyMzQ0IEwgMjAzLjgzNTkzOCAyNTEuMDE5NTMxIE0gMjE0LjA1MDc4MSAyMzQuOTMzNTk0IEwgMjAzLjg3ODkwNiAyMzQuOTMzNTk0IEwgMjAzLjg3ODkwNiAyNDAuMzEyNSBMIDIxNC4wNTA3ODEgMjQwLjMxMjUgTCAyMTQuMDUwNzgxIDIzNC45MzM1OTQgTSAyOTAuNjk1MzEyIDMyNi4zODY3MTkgTCAyMzYuMTQwNjI1IDMyNi4zODY3MTkgTCAyMzYuMTQwNjI1IDMxMC4yODEyNSBMIDIzMC43NSAzMTAuMjgxMjUgTCAyMzAuNzUgMzMxLjc2OTUzMSBMIDI5MC42OTUzMTIgMzMxLjc2OTUzMSBMIDI5MC42OTUzMTIgMzI2LjQxMDE1NiBMIDI5Ni4wNzgxMjUgMzI2LjQxMDE1NiBMIDI5Ni4wNzgxMjUgMzEwLjU1NDY4OCBMIDI5MC42OTUzMTIgMzEwLjU1NDY4OCBMIDI5MC42OTUzMTIgMzI2LjM4NjcxOSBNIDIyNC42MDE1NjIgMjQ1Ljg2MzI4MSBMIDIxOS4zODY3MTkgMjQ1Ljg2MzI4MSBMIDIxOS4zODY3MTkgMjUxLjI0NjA5NCBMIDIyNC42MDE1NjIgMjUxLjI0NjA5NCBMIDIyNC42MDE1NjIgMjYzLjU1NDY4OCBMIDIyOS45ODA0NjkgMjYzLjU1NDY4OCBMIDIyOS45ODA0NjkgMTg0Ljg0NzY1NiBMIDIyNC42MDE1NjIgMTg0Ljg0NzY1NiBMIDIyNC42MDE1NjIgMjQ1Ljg2MzI4MSBNIDI1MC4wMjczNDQgMjEyLjk5NjA5NCBMIDI1MC4wMjczNDQgMTg0LjY4MzU5NCBMIDI0NC42NDA2MjUgMTg0LjY4MzU5NCBMIDI0NC42NDA2MjUgMjQ3LjYwNTQ2OSBMIDI1MC4wMjczNDQgMjQ3LjYwNTQ2OSBMIDI1MC4wMjczNDQgMjE4LjM3ODkwNiBMIDI2NC42NDA2MjUgMjE4LjM3ODkwNiBMIDI2NC42NDA2MjUgMjEyLjk5NjA5NCBMIDI1MC4wMzEyNSAyMTIuOTk2MDk0IE0gMjMwLjAzNTE1NiAxNzkuNzczNDM4IEwgMjMwLjAzNTE1NiAxODUuMTY0MDYyIEwgMjQ0LjY0MDYyNSAxODUuMTY0MDYyIEwgMjQ0LjY0MDYyNSAxNzkuNzczNDM4IEwgMjMwLjAzNTE1NiAxNzkuNzczNDM4ICIgZmlsbC1vcGFjaXR5PSIxIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48ZyBjbGlwLXBhdGg9InVybCgjMjFkMjAwODZjYikiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0gMjM3LjAwMzkwNiAxMTguNSBDIDIzNy4wMDM5MDYgMTgzLjk0OTIxOSAxODMuOTQ5MjE5IDIzNy4wMDM5MDYgMTE4LjUwMzkwNiAyMzcuMDAzOTA2IEMgNTMuMDU0Njg4IDIzNy4wMDM5MDYgMC4wMDM5MDYyNSAxODMuOTQ5MjE5IDAuMDAzOTA2MjUgMTE4LjUgQyAwLjAwMzkwNjI1IDUzLjA1NDY4OCA1My4wNTQ2ODggMC4wMDM5MDYyNSAxMTguNTAzOTA2IDAuMDAzOTA2MjUgQyAxODMuOTQ5MjE5IDAuMDAzOTA2MjUgMjM3LjAwMzkwNiA1My4wNTQ2ODggMjM3LjAwMzkwNiAxMTguNSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjxwYXRoIGZpbGw9IiNkMmQyZDIiIGQ9Ik0gMC4wMTU2MjUgMTIwLjU1MDc4MSBMIDAuMDE1NjI1IDEyMC41MzUxNTYgTCAwLjAxNTYyNSAxMjAuNTUwNzgxIE0gMC4wMTU2MjUgMTIwLjQ2ODc1IEwgMC4wMTU2MjUgMTIwLjQ0NTMxMiBMIDAuMDE1NjI1IDEyMC40Njg3NSBNIDAuMDE1NjI1IDEyMC4zODI4MTIgTCAwLjAxNTYyNSAxMjAuMzU5Mzc1IEwgMC4wMTU2MjUgMTIwLjM4MjgxMiBNIDAuMDExNzE4OCAxMjAuMjkyOTY5IEwgMC4wMTE3MTg4IDEyMC4yNjk1MzEgTCAwLjAxMTcxODggMTIwLjI5Mjk2OSBNIDAuMDExNzE4OCAxMjAuMjA3MDMxIEwgMC4wMTE3MTg4IDEyMC4xNzk2ODggTCAwLjAxMTcxODggMTIwLjIwNzAzMSBNIDAuMDExNzE4OCAxMjAuMTE3MTg4IEwgMC4wMTE3MTg4IDEyMC4wOTc2NTYgTCAwLjAxMTcxODggMTIwLjExNzE4OCBNIDAuMDA3ODEyNSAxMTkuOTcyNjU2IEwgMC4wMDc4MTI1IDExOS45NDE0MDYgTCAwLjAwNzgxMjUgMTE5Ljk3MjY1NiBNIDAuMDA3ODEyNSAxMTkuODkwNjI1IEwgMC4wMDc4MTI1IDExOS44NTU0NjkgTCAwLjAwNzgxMjUgMTE5Ljg5MDYyNSBNIDAuMDA3ODEyNSAxMTkuODA0Njg4IEwgMC4wMDc4MTI1IDExOS43NjU2MjUgTCAwLjAwNzgxMjUgMTE5LjgwNDY4OCBNIDAuMDA3ODEyNSAxMTkuNzE0ODQ0IEwgMC4wMDc4MTI1IDExOS42NzE4NzUgTCAwLjAwNzgxMjUgMTE5LjcxNDg0NCBNIDAuMDA3ODEyNSAxMTkuNjI4OTA2IEwgMC4wMDc4MTI1IDExOS41ODIwMzEgTCAwLjAwNzgxMjUgMTE5LjYyODkwNiBNIDAuMDAzOTA2MjUgMTE5LjUzOTA2MiBMIDAuMDAzOTA2MjUgMTE5LjQ4ODI4MSBMIDAuMDAzOTA2MjUgMTE5LjUzOTA2MiBNIDAuMDAzOTA2MjUgMTE5LjQ0NTMxMiBMIDAuMDAzOTA2MjUgMTE5LjM5NDUzMSBMIDAuMDAzOTA2MjUgMTE5LjQ0NTMxMiBNIDAuMDAzOTA2MjUgMTE5LjM1OTM3NSBMIDAuMDAzOTA2MjUgMTE5LjI4NTE1NiBMIDAuMDAzOTA2MjUgMTE5LjM1OTM3NSBNIDAuMDAzOTA2MjUgMTE5LjI1NzgxMiBMIDAuMDAzOTA2MjUgMTE5LjE3NTc4MSBMIDAuMDAzOTA2MjUgMTE5LjI1NzgxMiBNIDAuMDAzOTA2MjUgMTE5LjE0NDUzMSBMIDAuMDAzOTA2MjUgMTE5LjA4NTkzOCBMIDAuMDAzOTA2MjUgMTE5LjE0NDUzMSBNIDAuMDAzOTA2MjUgMTE5LjA1NDY4OCBMIDAuMDAzOTA2MjUgMTE4Ljk5MjE4OCBMIDAuMDAzOTA2MjUgMTE5LjA1NDY4OCBNIDAuMDAzOTA2MjUgMTE4Ljk1NzAzMSBMIDAuMDAzOTA2MjUgMTE4LjkwMjM0NCBMIDAuMDAzOTA2MjUgMTE4Ljk1NzAzMSBNIDAuMDAzOTA2MjUgMTE4Ljg2NzE4OCBMIDAuMDAzOTA2MjUgMTE4LjgxMjUgTCAwLjAwMzkwNjI1IDExOC44NjcxODggTSAwLjAwMzkwNjI1IDExOC43NzM0MzggTCAwLjAwMzkwNjI1IDExOC43MTg3NSBMIDAuMDAzOTA2MjUgMTE4Ljc3MzQzOCBNIDAuMDAzOTA2MjUgMTE4LjY4MzU5NCBMIDAuMDAzOTA2MjUgMTE4LjYxNzE4OCBMIDAuMDAzOTA2MjUgMTE4LjY4MzU5NCBNIDAuMDAzOTA2MjUgMTE4LjU4OTg0NCBMIDAuMDAzOTA2MjUgMTE4LjUgTCAwLjAwMzkwNjI1IDExOC41ODk4NDQgIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGZpbGw9IiM1NDU0NTQiIGQ9Ik0gOTcuMDcwMzEyIDIzNS4wMzEyNSBDIDQyLjUxMTcxOSAyMjUuMDYyNSAwLjk4ODI4MSAxNzcuNzU3ODEyIDAuMDE1NjI1IDEyMC41NTA3ODEgTCAwLjAxNTYyNSAxMjAuMzU5Mzc1IEMgMC4wMTE3MTg4IDEyMC4zMzU5MzggMC4wMTE3MTg4IDEyMC4zMTY0MDYgMC4wMTE3MTg4IDEyMC4yOTI5NjkgTCAwLjAxMTcxODggMTIwLjA5NzY1NiBDIDAuMDExNzE4OCAxMjAuMDU4NTk0IDAuMDExNzE4OCAxMjAuMDE1NjI1IDAuMDA3ODEyNSAxMTkuOTcyNjU2IEwgMC4wMDc4MTI1IDExOS41ODIwMzEgQyAwLjAwNzgxMjUgMTE5LjU2MjUgMC4wMDc4MTI1IDExOS41NTQ2ODggMC4wMDM5MDYyNSAxMTkuNTM1MTU2IEwgMC4wMDM5MDYyNSAxMTguNSBDIDAuMDAzOTA2MjUgMTE2LjM2NzE4OCAwLjA2MjUgMTE0LjI1IDAuMTcxODc1IDExMi4xNDQ1MzEgTCA4Ny4yNTc4MTIgNDcuMzIwMzEyIEwgMTUxLjQ2MDkzOCAxOTQuMjY1NjI1IEwgOTcuMDcwMzEyIDIzNS4wMzEyNSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSAxNTguNjQ0NTMxIDkxLjM1OTM3NSBMIDE1Mi40Mjk2ODggOTEuMzk0NTMxIEwgMTUyLjU4MjAzMSAxMDkuODYzMjgxIEwgMTQ3LjE5OTIxOSAxMDkuODYzMjgxIEwgMTQ3LjE5OTIxOSA4Ni4wNjY0MDYgTCAxMzIuNTg5ODQ0IDg2LjA2NjQwNiBMIDEzMi41ODk4NDQgMTA5LjkxMDE1NiBMIDEyNy4yMDMxMjUgMTA5LjkxMDE1NiBMIDEyNi44NjcxODggODAuNjU2MjUgTCAxMTIuNTkzNzUgODAuNjgzNTk0IEwgMTEyLjU5Mzc1IDEwOS45MTAxNTYgTCAxMDcuMjA3MDMxIDEwOS45MTAxNTYgTCAxMDcuMjA3MDMxIDQ3LjQ2ODc1IEwgOTIuNjc5Njg4IDQ2Ljk4NDM3NSBMIDkyLjU0Njg3NSAxMjUuODU5Mzc1IEwgODcuMTY3OTY5IDEyNS44NTkzNzUgTCA4Ny4xNjc5NjkgMTEzLjU1NDY4OCBMIDgxLjk1MzEyNSAxMTMuNTU0Njg4IEwgODEuOTc2NTYyIDEwOC4yODUxNTYgTCA3Ni40OTYwOTQgMTA4LjAwNzgxMiBMIDc2LjQ5NjA5NCAxMDIuNjE3MTg4IEwgNjYuMzk4NDM4IDEwMi45Mjk2ODggTCA2Ni4zOTg0MzggMTEzLjMyNDIxOSBMIDY2LjI5Njg3NSAxMTguNjY3OTY5IEwgNzEuNzgxMjUgMTE4LjcwNzAzMSBMIDcxLjc4MTI1IDEyOS4zNTkzNzUgTCA3Ny4xNjc5NjkgMTI5LjQ2ODc1IEwgNzcuMTY3OTY5IDEzOS41MzUxNTYgTCA4Mi41NTA3ODEgMTQwLjIzODI4MSBMIDgyLjU1MDc4MSAxNTAuMjQ2MDk0IEwgODcuOTMzNTk0IDE1MS4wNTQ2ODggTCA4Ny45MzM1OTQgMTYxLjEyNSBMIDkzLjMxMjUgMTYxLjgxNjQwNiBMIDkzLjMxMjUgMTcxLjgyODEyNSBMIDk4LjcwNzAzMSAxNzIuNTg1OTM4IEwgOTguNzA3MDMxIDE4OC42OTE0MDYgTCAxNTMuMjU3ODEyIDE4OC42OTE0MDYgTCAxNTMuMjU3ODEyIDE3Mi44NTkzNzUgTCAxNTguNjQ0NTMxIDE3Mi42OTE0MDYgTCAxNTguNjQ0NTMxIDE0MC42MjUgTCAxNjMuMTMyODEyIDE0MC42MjUgTCAxNjMuMTMyODEyIDk2LjcyNjU2MiBMIDE1OC42NDQ1MzEgOTYuNzg1MTU2IEwgMTU4LjY0NDUzMSA5MS4zNjMyODEgIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGZpbGw9IiM3MzczNzMiIGQ9Ik0gMTQ2LjcwMzEyNSA4NS43ODEyNSBMIDE0Ni43MDMxMjUgODAuNDQ5MjE5IEwgMTI2LjcwNzAzMSA4MC40NDkyMTkgTCAxMjYuNzA3MDMxIDEwOS42NzE4NzUgTCAxMzIuMDkzNzUgMTA5LjY3MTg3NSBMIDEzMi4wOTM3NSA4NS44MjgxMjUgTCAxNDYuNzAzMTI1IDg1LjgyODEyNSBMIDE0Ni43MDMxMjUgMTA5LjYyNSBMIDE1Mi4wODU5MzggMTA5LjYyNSBMIDE1Mi4wODU5MzggOTEuMTYwMTU2IEwgMTU4LjE0NDUzMSA5MS4xNjAxNTYgTCAxNTguMTQ0NTMxIDg1Ljc4MTI1IEwgMTQ2LjcwMzEyNSA4NS43ODEyNSBNIDE1OC4xNDQ1MzEgMTcyLjYyMTA5NCBMIDE2My41MzEyNSAxNzIuNjIxMDk0IEwgMTYzLjUzMTI1IDE0MC4zODY3MTkgTCAxNTguMTQ0NTMxIDE0MC4zODY3MTkgTCAxNTguMTQ0NTMxIDE3Mi42MjEwOTQgTSAxNTguMTQ0NTMxIDkxLjE2MDE1NiBMIDE1OC4xNDQ1MzEgOTYuNTQ2ODc1IEwgMTYzLjUzMTI1IDk2LjU0Njg3NSBMIDE2My41MzEyNSA5MS4xNjAxNTYgTCAxNTguMTQ0NTMxIDkxLjE2MDE1NiBNIDE2My41MzEyNSA5Ni41NDY4NzUgTCAxNjMuNTMxMjUgMTQwLjM4NjcxOSBMIDE2OC45MDYyNSAxNDAuMzg2NzE5IEwgMTY4LjkwNjI1IDk2LjU0Njg3NSBMIDE2My41MzEyNSA5Ni41NDY4NzUgTSA3NiAxMDIuMzgyODEyIEwgNzYgMTA3Ljc2OTUzMSBMIDgxLjM4MjgxMiAxMDcuNzY5NTMxIEwgODEuMzgyODEyIDEwMi4zODI4MTIgTCA3NiAxMDIuMzgyODEyIE0gNzYuNjY3OTY5IDE0MCBMIDc2LjY2Nzk2OSAxNTAuNzY1NjI1IEwgODIuMDU0Njg4IDE1MC43NjU2MjUgTCA4Mi4wNTQ2ODggMTQwIEwgNzYuNjY3OTY5IDE0MCBNIDgyLjA1NDY4OCAxNTAuODE2NDA2IEwgODIuMDU0Njg4IDE2MS41NzgxMjUgTCA4Ny40Mzc1IDE2MS41NzgxMjUgTCA4Ny40Mzc1IDE1MC44MTY0MDYgTCA4Mi4wNTQ2ODggMTUwLjgxNjQwNiBNIDg3LjQzNzUgMTYxLjU3ODEyNSBMIDg3LjQzNzUgMTcyLjM0NzY1NiBMIDkyLjgxNjQwNiAxNzIuMzQ3NjU2IEwgOTIuODE2NDA2IDE2MS41NzgxMjUgTCA4Ny40Mzc1IDE2MS41NzgxMjUgTSA3MS4yODkwNjIgMTI5LjIzMDQ2OSBMIDcxLjI4OTA2MiAxNDAgTCA3Ni42Njc5NjkgMTQwIEwgNzYuNjY3OTY5IDEyOS4yMzA0NjkgTCA3MS4yODkwNjIgMTI5LjIzMDQ2OSBNIDY1LjkwMjM0NCAxMTguNDY4NzUgTCA2NS45MDIzNDQgMTI5LjIzMDQ2OSBMIDcxLjI4OTA2MiAxMjkuMjMwNDY5IEwgNzEuMjg5MDYyIDExOC40Njg3NSBMIDY1LjkwMjM0NCAxMTguNDY4NzUgTSA2NS45MDIzNDQgMTEzLjA4NTkzOCBMIDY1LjkwMjM0NCAxMDIuNTUwNzgxIEwgNjAuNTE5NTMxIDEwMi41NTA3ODEgTCA2MC41MTk1MzEgMTE4LjQ2ODc1IEwgNjUuOTAyMzQ0IDExOC40Njg3NSBMIDY1LjkwMjM0NCAxMTMuMDg1OTM4IE0gNzYuMTE3MTg4IDk3IEwgNjUuOTQ5MjE5IDk3IEwgNjUuOTQ5MjE5IDEwMi4zODI4MTIgTCA3Ni4xMTcxODggMTAyLjM4MjgxMiBMIDc2LjExNzE4OCA5NyBNIDE1Mi43NjE3MTkgMTg4LjQ1MzEyNSBMIDk4LjIxMDkzOCAxODguNDUzMTI1IEwgOTguMjEwOTM4IDE3Mi4zNDc2NTYgTCA5Mi44MTY0MDYgMTcyLjM0NzY1NiBMIDkyLjgxNjQwNiAxOTMuODM1OTM4IEwgMTUyLjc2MTcxOSAxOTMuODM1OTM4IEwgMTUyLjc2MTcxOSAxODguNDc2NTYyIEwgMTU4LjE0NDUzMSAxODguNDc2NTYyIEwgMTU4LjE0NDUzMSAxNzIuNjIxMDk0IEwgMTUyLjc2MTcxOSAxNzIuNjIxMDk0IEwgMTUyLjc2MTcxOSAxODguNDUzMTI1IE0gODYuNjY3OTY5IDEwNy45Mjk2ODggTCA4MS40NTMxMjUgMTA3LjkyOTY4OCBMIDgxLjQ1MzEyNSAxMTMuMzEyNSBMIDg2LjY2Nzk2OSAxMTMuMzEyNSBMIDg2LjY2Nzk2OSAxMjUuNjIxMDk0IEwgOTIuMDUwNzgxIDEyNS42MjEwOTQgTCA5Mi4wNTA3ODEgNDYuOTE0MDYyIEwgODYuNjY3OTY5IDQ2LjkxNDA2MiBMIDg2LjY2Nzk2OSAxMDcuOTI5Njg4IE0gMTEyLjA5NzY1NiA3NS4wNjY0MDYgTCAxMTIuMDk3NjU2IDQ2Ljc1IEwgMTA2LjcxMDkzOCA0Ni43NSBMIDEwNi43MTA5MzggMTA5LjY3MTg3NSBMIDExMi4wOTc2NTYgMTA5LjY3MTg3NSBMIDExMi4wOTc2NTYgODAuNDQ5MjE5IEwgMTI2LjcwNzAzMSA4MC40NDkyMTkgTCAxMjYuNzA3MDMxIDc1LjA2NjQwNiBMIDExMi4wOTc2NTYgNzUuMDY2NDA2IE0gOTIuMTAxNTYyIDQxLjgzOTg0NCBMIDkyLjEwMTU2MiA0Ny4yMzA0NjkgTCAxMDYuNzEwOTM4IDQ3LjIzMDQ2OSBMIDEwNi43MTA5MzggNDEuODM5ODQ0IEwgOTIuMTAxNTYyIDQxLjgzOTg0NCAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+"})})}},T={};function I(M){var D=T[M];if(void 0!==D)return D.exports;var j=T[M]={exports:{}};return N[M](j,j.exports,I),j.exports}I.m=N,M=[],I.O=(N,T,D,j)=>{if(!T){var g=1/0;for(O=0;O<M.length;O++){for(var[T,D,j]=M[O],z=!0,A=0;A<T.length;A++)(!1&j||g>=j)&&Object.keys(I.O).every((M=>I.O[M](T[A])))?T.splice(A--,1):(z=!1,j<g&&(g=j));if(z){M.splice(O--,1);var E=D();void 0!==E&&(N=E)}}return N}j=j||0;for(var O=M.length;O>0&&M[O-1][2]>j;O--)M[O]=M[O-1];M[O]=[T,D,j]},I.o=(M,N)=>Object.prototype.hasOwnProperty.call(M,N),(()=>{var M={102:0,978:0};I.O.j=N=>0===M[N];var N=(N,T)=>{var D,j,[g,z,A]=T,E=0;if(g.some((N=>0!==M[N]))){for(D in z)I.o(z,D)&&(I.m[D]=z[D]);if(A)var O=A(I)}for(N&&N(T);E<g.length;E++)j=g[E],I.o(M,j)&&M[j]&&M[j][0](),M[j]=0;return I.O(O)},T=globalThis.webpackChunkeasyblocks=globalThis.webpackChunkeasyblocks||[];T.forEach(N.bind(null,0)),T.push=N.bind(null,T.push.bind(T))})();var D=I.O(void 0,[978],(()=>I(906)));D=I.O(D)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/easygroup/assets/icon.svg":
+/*!**********************************************!*\
+  !*** ./src/blocks/easygroup/assets/icon.svg ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgIcon),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgIcon = function SvgIcon(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlSpace: "preserve",
+    width: 800,
+    height: 800,
+    viewBox: "0 0 32 32"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M19.324 2h1.414L18 4.738V3.324zm-6.586 0h-1.414L2 11.324v1.414zm-1.414 12h1.414L14 12.738v-1.414zm-4 0h1.414L14 8.738V7.324zm16-12L18 7.324v1.414L24.738 2zM14 4.738V3.324L3.324 14h1.414zM8.738 2H7.324L2 7.324v1.414zm10.586 28h1.414L30 20.738v-1.414zm8 0h1.414L30 28.738v-1.414zm-4 0h1.414L30 24.738v-1.414zM18 27.324v1.414L28.738 18h-1.414zM4.738 2H3.324L2 3.324v1.414zM14 20.738v-1.414L3.324 30h1.414zM23.324 14h1.414L30 8.738V7.324zm4 0h1.414L30 12.738v-1.414zM14 28.738v-1.414L11.324 30h1.414zM19.324 14h1.414L30 4.738V3.324zM4.738 18H3.324L2 19.324v1.414zM18 11.324v1.414L28.738 2h-1.414zM12.738 18h-1.414L2 27.324v1.414zm-4 0H7.324L2 23.324v1.414zM18 19.324v1.414L20.738 18h-1.414zm-4 5.414v-1.414L7.324 30h1.414zM24.738 18h-1.414L18 23.324v1.414z",
+    style: {
+      fill: "#ffc5bb"
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M14 14H2V2h12zM2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm28 13H18V2h12zM18 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm-4 29H2V18h12zM2 17a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V18a1 1 0 0 0-1-1zm28 13H18V18h12zM18 17a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V18a1 1 0 0 0-1-1z",
+    style: {
+      fill: "#265aa5"
+    }
+  }));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iVXBsb2FkZWQgdG8gc3ZncmVwby5jb20iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5oYXRjaF9lZW57ZmlsbDojMjY1QUE1O30NCgkuaGF0Y2hfdHdlZXtmaWxsOiNGRkM1QkI7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwYXRoIGNsYXNzPSJoYXRjaF90d2VlIiBkPSJNMTkuMzI0LDJoMS40MTRMMTgsNC43MzhWMy4zMjRMMTkuMzI0LDJ6IE0xMi43MzgsMmgtMS40MTRMMiwxMS4zMjR2MS40MTRMMTIuNzM4LDJ6IE0xMS4zMjQsMTRoMS40MTQNCgkJTDE0LDEyLjczOHYtMS40MTRMMTEuMzI0LDE0eiBNNy4zMjQsMTRoMS40MTRMMTQsOC43MzhWNy4zMjRMNy4zMjQsMTR6IE0yMy4zMjQsMkwxOCw3LjMyNHYxLjQxNEwyNC43MzgsMkgyMy4zMjR6IE0xNCw0LjczOA0KCQlWMy4zMjRMMy4zMjQsMTRoMS40MTRMMTQsNC43Mzh6IE04LjczOCwySDcuMzI0TDIsNy4zMjR2MS40MTRMOC43MzgsMnogTTE5LjMyNCwzMGgxLjQxNEwzMCwyMC43Mzh2LTEuNDE0TDE5LjMyNCwzMHogTTI3LjMyNCwzMA0KCQloMS40MTRMMzAsMjguNzM4di0xLjQxNEwyNy4zMjQsMzB6IE0yMy4zMjQsMzBoMS40MTRMMzAsMjQuNzM4di0xLjQxNEwyMy4zMjQsMzB6IE0xOCwyNy4zMjR2MS40MTRMMjguNzM4LDE4aC0xLjQxNEwxOCwyNy4zMjR6DQoJCSBNNC43MzgsMkgzLjMyNEwyLDMuMzI0djEuNDE0TDQuNzM4LDJ6IE0xNCwyMC43Mzh2LTEuNDE0TDMuMzI0LDMwaDEuNDE0TDE0LDIwLjczOHogTTIzLjMyNCwxNGgxLjQxNEwzMCw4LjczOFY3LjMyNEwyMy4zMjQsMTR6DQoJCSBNMjcuMzI0LDE0aDEuNDE0TDMwLDEyLjczOHYtMS40MTRMMjcuMzI0LDE0eiBNMTQsMjguNzM4di0xLjQxNEwxMS4zMjQsMzBoMS40MTRMMTQsMjguNzM4eiBNMTkuMzI0LDE0aDEuNDE0TDMwLDQuNzM4VjMuMzI0DQoJCUwxOS4zMjQsMTR6IE00LjczOCwxOEgzLjMyNEwyLDE5LjMyNHYxLjQxNEw0LjczOCwxOHogTTE4LDExLjMyNHYxLjQxNEwyOC43MzgsMmgtMS40MTRMMTgsMTEuMzI0eiBNMTIuNzM4LDE4aC0xLjQxNEwyLDI3LjMyNA0KCQl2MS40MTRMMTIuNzM4LDE4eiBNOC43MzgsMThINy4zMjRMMiwyMy4zMjR2MS40MTRMOC43MzgsMTh6IE0xOCwxOS4zMjR2MS40MTRMMjAuNzM4LDE4aC0xLjQxNEwxOCwxOS4zMjR6IE0xNCwyNC43Mzh2LTEuNDE0DQoJCUw3LjMyNCwzMGgxLjQxNEwxNCwyNC43Mzh6IE0yNC43MzgsMThoLTEuNDE0TDE4LDIzLjMyNHYxLjQxNEwyNC43MzgsMTh6Ii8+DQoJPHBhdGggY2xhc3M9ImhhdGNoX2VlbiIgZD0iTTE0LDE0SDJWMmgxMlYxNHogTTIsMUMxLjQ0OCwxLDEsMS40NDgsMSwydjEyYzAsMC41NTIsMC40NDgsMSwxLDFoMTJjMC41NTIsMCwxLTAuNDQ4LDEtMVYyDQoJCWMwLTAuNTUyLTAuNDQ4LTEtMS0xSDJ6IE0zMCwxNEgxOFYyaDEyVjE0eiBNMTgsMWMtMC41NTIsMC0xLDAuNDQ4LTEsMXYxMmMwLDAuNTUyLDAuNDQ4LDEsMSwxaDEyYzAuNTUyLDAsMS0wLjQ0OCwxLTFWMg0KCQljMC0wLjU1Mi0wLjQ0OC0xLTEtMUgxOHogTTE0LDMwSDJWMThoMTJWMzB6IE0yLDE3Yy0wLjU1MiwwLTEsMC40NDgtMSwxdjEyYzAsMC41NTIsMC40NDgsMSwxLDFoMTJjMC41NTIsMCwxLTAuNDQ4LDEtMVYxOA0KCQljMC0wLjU1Mi0wLjQ0OC0xLTEtMUgyeiBNMzAsMzBIMThWMThoMTJWMzB6IE0xOCwxN2MtMC41NTIsMC0xLDAuNDQ4LTEsMXYxMmMwLDAuNTUyLDAuNDQ4LDEsMSwxaDEyYzAuNTUyLDAsMS0wLjQ0OCwxLTFWMTgNCgkJYzAtMC41NTItMC40NDgtMS0xLTFIMTh6Ii8+DQo8L2c+DQo8L3N2Zz4=");
+
+/***/ }),
+
+/***/ "./src/blocks/easygroup/edit.js":
+/*!**************************************!*\
+  !*** ./src/blocks/easygroup/edit.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils_parseValue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/parseValue */ "./src/utils/parseValue.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/easygroup/editor.scss");
+
+
+
+
+function Edit(props) {
+  console.log({
+    props
+  });
+  const blockGap = (0,_utils_parseValue__WEBPACK_IMPORTED_MODULE_2__.parseValue)(props.attributes.style?.spacing?.blockGap || "");
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+    style: {
+      gap: blockGap,
+      justifyContent: props.attributes.justifyContent
+    }
+  });
+  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)(blockProps, {
+    template: [["easyblocks/easy-button", {}]],
+    allowedBlocks: ["easyblocks/easy-button"]
+  });
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.JustifyContentControl, {
+    value: props.attributes.justifyContent,
+    allowedControls: ["left", "center", "right"],
+    onChange: newValue => {
+      props.setAttributes({
+        justifyContent: newValue
+      });
+    }
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...innerBlocksProps
+  }));
+}
+
+/***/ }),
+
+/***/ "./src/blocks/easygroup/index.js":
+/*!***************************************!*\
+  !*** ./src/blocks/easygroup/index.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/easygroup/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/easygroup/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/easygroup/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/blocks/easygroup/block.json");
+/* harmony import */ var _assets_icon_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon.svg */ "./src/blocks/easygroup/assets/icon.svg");
+
+/**
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_5__.name, {
+  /**
+   * @see ./edit.js
+   */
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  /**
+   * @see ./save.js
+   */
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"],
+  icon: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _assets_icon_svg__WEBPACK_IMPORTED_MODULE_6__["default"]
+  })
+});
+
+/***/ }),
+
+/***/ "./src/blocks/easygroup/save.js":
+/*!**************************************!*\
+  !*** ./src/blocks/easygroup/save.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Save)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+
+function Save() {
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save();
+  const {
+    children
+  } = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps.save(blockProps);
+  return children;
+}
+
+/***/ }),
+
+/***/ "./src/utils/parseValue.js":
+/*!*********************************!*\
+  !*** ./src/utils/parseValue.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   parseValue: () => (/* binding */ parseValue)
+/* harmony export */ });
+const parseValue = value => {
+  if (value.indexOf("var:") === 0) {
+    const varValue = value.split(":")[1].split("|").join("--");
+    // preset--spacing--40
+    return `var(--wp--${varValue})`;
+  }
+  return value;
+};
+
+/***/ }),
+
+/***/ "./src/blocks/easygroup/editor.scss":
+/*!******************************************!*\
+  !*** ./src/blocks/easygroup/editor.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/easygroup/style.scss":
+/*!*****************************************!*\
+  !*** ./src/blocks/easygroup/style.scss ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "./src/blocks/easygroup/block.json":
+/*!*****************************************!*\
+  !*** ./src/blocks/easygroup/block.json ***!
+  \*****************************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"easyblocks/easy-group","version":"1.0.1","title":"Easy Group","category":"easyblocks","icon":"table","description":"A collection of Easy Buttons that lead to buttons for different post types","supports":{"html":false,"spacing":{"blockGap":true}},"attributes":{"justifyContent":{"type":"string","enum":["left","center","right"],"default":"left"}},"textdomain":"easyblocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"blocks/easygroup/index": 0,
+/******/ 			"blocks/easygroup/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkeasyblocks"] = globalThis["webpackChunkeasyblocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/easygroup/style-index"], () => (__webpack_require__("./src/blocks/easygroup/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

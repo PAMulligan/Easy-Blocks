@@ -1,1 +1,45 @@
-.wp-block-easyblocks-easy-image{box-sizing:border-box;position:relative;text-align:center;width:270px}.wp-block-easyblocks-easy-image .easy-gallery-overlay{background-color:#eee;bottom:0;height:100%;left:0;opacity:0;position:absolute;right:0;top:0;transition:.5s ease;width:100%}.wp-block-easyblocks-easy-image .easy-gallery-overlay .easy-gallery-hover-text{font-size:1.2rem;left:50%;position:absolute;text-align:center;top:50%;transform:translate(-50%,-50%);width:88%}.wp-block-easyblocks-easy-image .easy-gallery-tagline{background-color:#eee;font-size:1.2rem}.wp-block-easyblocks-easy-image:hover .easy-gallery-overlay{opacity:1}@media screen and (max-width:767px){.wp-block-easyblocks-easy-image{width:unset}}
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/easyimage/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-easyblocks-easy-image {
+  position: relative;
+  width: 270px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.wp-block-easyblocks-easy-image .easy-gallery-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #eee;
+}
+.wp-block-easyblocks-easy-image .easy-gallery-overlay .easy-gallery-hover-text {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 88%;
+}
+.wp-block-easyblocks-easy-image .easy-gallery-tagline {
+  background-color: #eee;
+  font-size: 1.2rem;
+}
+.wp-block-easyblocks-easy-image:hover .easy-gallery-overlay {
+  opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .wp-block-easyblocks-easy-image {
+    width: unset;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

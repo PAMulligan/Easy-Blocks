@@ -20,7 +20,7 @@ import "./style.scss";
 import edit from "./edit";
 import save from "./save";
 import metadata from "./block.json";
-import icon from "./assets/easyGroup.svg";
+import icon from "./assets/icon.svg";
 
 /**
  * Every block starts by registering a new block type definition.

@@ -1,1 +1,450 @@
-(()=>{"use strict";var M,t={93:()=>{const M=window.React,t=window.wp.blocks,N=window.wp.blockEditor,e=window.wp.components,j=window.wp.data,L=JSON.parse('{"UU":"easyblocks/easy-button"}');(0,t.registerBlockType)(L.UU,{edit:function(t){const L=(0,j.useSelect)((M=>{const t=M("core").getEntityRecords("root","postType",{per_page:-1});return t?.filter((M=>M.visibility.show_in_nav_menus&&M.visibility.show_ui))})),T=(0,j.useSelect)((M=>M("core").getEntityRecords("postType",t.attributes.postType,{per_page:-1})),[t.attributes.postType]);console.log({posts:T});const u=(0,N.useBlockProps)();return(0,M.createElement)(M.Fragment,null,(0,M.createElement)(N.InspectorControls,null,(0,M.createElement)(e.PanelBody,{title:"Destination"},(0,M.createElement)(e.SelectControl,{label:"Type",value:t.attributes.postType,onChange:M=>{t.setAttributes({postType:M})},options:[{label:"Select a post type...",value:""},...(L||[]).map((M=>({label:M.labels.singular_name,value:M.slug})))]}),!!t.attributes.postType&&(0,M.createElement)(e.SelectControl,{label:`Linked ${t.attributes.postType}`,value:t.attributes.linkedPost,onChange:M=>{t.setAttributes({linkedPost:M?parseInt(M):null})},options:[{label:`Select a ${t.attributes.postType} to link to`,value:""},...(T||[]).map((M=>({label:M.title.rendered,value:M.id})))]}))),(0,M.createElement)("div",{...u},(0,M.createElement)(N.RichText,{placeholder:"Label text",value:t.attributes.labelText,allowedFormats:[],multiline:!1,onSplit:()=>{},onReplace:()=>{},onChange:M=>{t.setAttributes({labelText:M})}})))},save:function(){return null},icon:(0,M.createElement)("img",{src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgdmlld0JveD0iMCAwIDM3NSAzNzUiIGhlaWdodD0iMjQiIHZlcnNpb249IjEuMCI+PHBhdGggZD0iTTM3NS4wMDQgMTg3LjVjMCAxMDMuNTU5LTgzLjk0NSAxODcuNTA0LTE4Ny40OTYgMTg3LjUwNEM4My45NDkgMzc1LjAwNC4wMDQgMjkxLjA1OS4wMDQgMTg3LjUuMDA0IDgzLjk1IDgzLjk0OS4wMDQgMTg3LjUwOC4wMDRjMTAzLjU1IDAgMTg3LjQ5NiA4My45NDUgMTg3LjQ5NiAxODcuNDk2Ii8+PHBhdGggZmlsbD0iI2QyZDJkMiIgZD0iTS4wMjMgMTkwLjc0MnYtLjAyLjAybTAtLjEyOXYtLjAzNS4wMzVtMC0uMTM2di0uMDM2LjAzNm0tLjAwNy0uMTM3di0uMDQzLjA0M20wLS4xMzd2LS4wNDcuMDQ3bTAtLjE0NHYtLjAzMi4wMzJtLS4wMDQtLjIyN3YtLjA1LjA1bTAtLjEyOXYtLjA1OC4wNThtMC0uMTM3di0uMDY2LjA2Nm0wLS4xNDR2LS4wNjcuMDY3bTAtLjEzN3YtLjA3NC4wNzRtLS4wMDgtLjE0NHYtLjA3NS4wNzVtMC0uMTQ1di0uMDgyLjA4Mm0wLS4xMzd2LS4xMTcuMTE3bTAtLjE2di0uMTI5LjEzbTAtLjE4di0uMDk0LjA5NG0wLS4xNDV2LS4wOTQuMDk0bTAtLjE1MnYtLjA4Ni4wODZtMC0uMTQ1di0uMDg2LjA4Nm0wLS4xNDR2LS4wODYuMDg2bTAtLjE0NXYtLjEwMS4xMDFtMC0uMTQ0di0uMTQ1LjE0NSIvPjxwYXRoIGZpbGw9IiM1NDU0NTQiIGQ9Ik0xNTMuNTk0IDM3MS44ODNDNjcuMjY2IDM1Ni4xMDkgMS41NjMgMjgxLjI2Mi4wMjQgMTkwLjc0M3YtLjMwMmMtLjAwOC0uMDM5LS4wMDgtLjA2Ni0uMDA4LS4xMDFWMTkwLjAyN2MwLS4wNTggMC0uMTI5LS4wMDQtLjE5NXYtLjYyMWMwLS4wMjcgMC0uMDQzLS4wMDgtLjA3VjE4Ny41YzAtMy4zNzUuMDk0LTYuNzI3LjI2Ni0xMC4wNTVMMTM4LjA2NiA3NC44NzFsMTAxLjU4NiAyMzIuNTEyLTg2LjA1OCA2NC41Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0ibTI1MS4wMiAxNDQuNTU5LTkuODM2LjA1LjI0MiAyOS4yMjNoLTguNTE2VjEzNi4xOGgtMjMuMTEzdjM3LjcyNmgtOC41MjRsLS41MzUtNDYuMjg1LTIyLjU4Ni4wNDN2NDYuMjQyaC04LjUyM1Y3NS4xMWwtMjIuOTg0LS43NjUtLjIwOCAxMjQuOGgtOC41MTV2LTE5LjQ3MmgtOC4yNWwuMDM1LTguMzM2LTguNjY4LS40NDF2LTguNTI0bC0xNS45NzcuNDkydjE2LjQ0NmwtLjE2NCA4LjQ1NyA4LjY4LjA1OHYxNi44Nmw4LjUyNC4xNzF2MTUuOTNsOC41MTUgMS4xMXYxNS44MzVsOC41MTYgMS4yNzh2MTUuOTMzbDguNTE1IDEuMDk4djE1Ljg0bDguNTMyIDEuMnYyNS40ODNoODYuMzE2di0yNS4wNWw4LjUyNC0uMjY2di01MC43NDJoNy4xMDF2LTY5LjQ1N2wtNy4xMDEuMDk0di04LjU4MiIvPjxwYXRoIGZpbGw9IiM3MzczNzMiIGQ9Ik0yMzIuMTI1IDEzNS43M3YtOC40NGgtMzEuNjM3djQ2LjI0MWg4LjUyNHYtMzcuNzI2aDIzLjExM3YzNy42NTJoOC41MTZ2LTI5LjIxNWg5LjU4NnYtOC41MTJoLTE4LjEwMk0yNTAuMjI3IDI3My4xMzdoOC41MjN2LTUxLjAwOGgtOC41MjN2NTEuMDA4TTI1MC4yMjcgMTQ0LjI0MnY4LjUyNGg4LjUyM3YtOC41MjRoLTguNTIzTTI1OC43NSAxNTIuNzY2djY5LjM2M2g4LjUwOHYtNjkuMzYzaC04LjUwOE0xMjAuMjU0IDE2MS45OTZ2OC41MjRoOC41MTZ2LTguNTI0aC04LjUxNk0xMjEuMzA5IDIyMS41MnYxNy4wMzVoOC41MjNWMjIxLjUyaC04LjUyM00xMjkuODMyIDIzOC42MzN2MTcuMDMxaDguNTE2di0xNy4wMzFoLTguNTE2TTEzOC4zNDggMjU1LjY2NHYxNy4wNGg4LjUxNXYtMTcuMDRoLTguNTE1TTExMi43OTcgMjA0LjQ4djE3LjA0aDguNTEydi0xNy4wNGgtOC41MTJNMTA0LjI3NyAxODcuNDV2MTcuMDNoOC41MnYtMTcuMDNoLTguNTJNMTA0LjI3NyAxNzguOTM0di0xNi42NzJoLTguNTJ2MjUuMTg3aDguNTJ2LTguNTE1TTEyMC40NDEgMTUzLjQ4aC0xNi4wOTN2OC41MTZoMTYuMDkzdi04LjUxNk0yNDEuNzEgMjk4LjE4OGgtODYuMzE1di0yNS40ODVoLTguNTMydjM0aDk0Ljg0OHYtOC40OGg4LjUxNnYtMjUuMDg2aC04LjUxNnYyNS4wNU0xMzcuMTMzIDE3MC43NzdoLTguMjV2OC41MTZoOC4yNXYxOS40NzdoOC41MTVWNzQuMjM0aC04LjUxNXY5Ni41NDNNMTc3LjM2NyAxMTguNzczdi00NC44aC04LjUyM3Y5OS41NThoOC41MjNWMTI3LjI5aDIzLjEyMXYtOC41MTZoLTIzLjEyTTE0NS43MyA2Ni4yMDN2OC41MzFoMjMuMTE0di04LjUzSDE0NS43MyIvPjwvc3ZnPg=="})})}},N={};function e(M){var j=N[M];if(void 0!==j)return j.exports;var L=N[M]={exports:{}};return t[M](L,L.exports,e),L.exports}e.m=t,M=[],e.O=(t,N,j,L)=>{if(!N){var T=1/0;for(g=0;g<M.length;g++){for(var[N,j,L]=M[g],u=!0,i=0;i<N.length;i++)(!1&L||T>=L)&&Object.keys(e.O).every((M=>e.O[M](N[i])))?N.splice(i--,1):(u=!1,L<T&&(T=L));if(u){M.splice(g--,1);var o=j();void 0!==o&&(t=o)}}return t}L=L||0;for(var g=M.length;g>0&&M[g-1][2]>L;g--)M[g]=M[g-1];M[g]=[N,j,L]},e.o=(M,t)=>Object.prototype.hasOwnProperty.call(M,t),(()=>{var M={55:0,503:0};e.O.j=t=>0===M[t];var t=(t,N)=>{var j,L,[T,u,i]=N,o=0;if(T.some((t=>0!==M[t]))){for(j in u)e.o(u,j)&&(e.m[j]=u[j]);if(i)var g=i(e)}for(t&&t(N);o<T.length;o++)L=T[o],e.o(M,L)&&M[L]&&M[L][0](),M[L]=0;return e.O(g)},N=globalThis.webpackChunkeasyblocks=globalThis.webpackChunkeasyblocks||[];N.forEach(t.bind(null,0)),N.push=t.bind(null,N.push.bind(N))})();var j=e.O(void 0,[503],(()=>e(93)));j=e.O(j)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/easybutton/assets/icon.svg":
+/*!***********************************************!*\
+  !*** ./src/blocks/easybutton/assets/icon.svg ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgIcon),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgIcon = function SvgIcon(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlSpace: "preserve",
+    width: 800,
+    height: 800,
+    viewBox: "0 0 32 32"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M18.535 24h1.414l-7 7h-1.414zm-3 7h1.414L22 25.949v-1.414zm4 0h1.414L22 29.949v-1.414zM9 29.535v1.414L15.949 24h-1.414zm0-4v1.414L11.949 24h-1.414z",
+    style: {
+      fill: "#ffc5bb"
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M24.664 12.193 23.129 9.89A2 2 0 0 0 21.465 9H19V3c0-1.654-1.346-3-3-3s-3 1.346-3 3v6h-2.279c-.862 0-1.625.55-1.897 1.367L8.279 12h-.661a1.99 1.99 0 0 0-1.789 1.106l-.618 1.236a2 2 0 0 0-.211.894V17.5c0 1.252.598 2.449 1.6 3.2L9 22.5v.5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-7a.985.985 0 0 0-.792-.958l2.269-3.107c.338-.37.523-.845.523-1.349v-5.283c0-.396-.116-.78-.336-1.11M22 31H9v-7h13zm2-12.414c0 .265-.105.52-.293.707L21 23H10v-1l-2.8-2.1A3 3 0 0 1 6 17.5v-2.264c0-.155.036-.308.106-.447l.618-1.236A1 1 0 0 1 7.618 13H9l.772-2.316a1 1 0 0 1 .949-.684H14V3a2 2 0 1 1 4 0v7h3.465a1 1 0 0 1 .832.445l1.535 2.303c.11.164.168.357.168.555z",
+    style: {
+      fill: "#265aa5"
+    }
+  }));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+CjxzdmcgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJVcGxvYWRlZCB0byBzdmdyZXBvLmNvbSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5oYXRjaF9lZW57ZmlsbDojMjY1QUE1O30NCgkuaGF0Y2hfdHdlZXtmaWxsOiNGRkM1QkI7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwYXRoIGNsYXNzPSJoYXRjaF90d2VlIiBkPSJNMTguNTM1LDI0aDEuNDE0bC03LDdoLTEuNDE0TDE4LjUzNSwyNHogTTE1LjUzNSwzMWgxLjQxNEwyMiwyNS45NDl2LTEuNDE0TDE1LjUzNSwzMXogTTE5LjUzNSwzMQ0KCQloMS40MTRMMjIsMjkuOTQ5di0xLjQxNEwxOS41MzUsMzF6IE05LDI5LjUzNXYxLjQxNEwxNS45NDksMjRoLTEuNDE0TDksMjkuNTM1eiBNOSwyNS41MzV2MS40MTRMMTEuOTQ5LDI0aC0xLjQxNEw5LDI1LjUzNXoiLz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9ImhhdGNoX2VlbiIgZD0iTTI0LjY2NCwxMi4xOTNsLTEuNTM1LTIuMzAzQzIyLjc1Nyw5LjMzMywyMi4xMzUsOSwyMS40NjUsOUgxOVYzYzAtMS42NTQtMS4zNDYtMy0zLTMNCgkJCWMtMS42NTQsMC0zLDEuMzQ2LTMsM3Y2aC0yLjI3OWMtMC44NjIsMC0xLjYyNSwwLjU1LTEuODk3LDEuMzY3TDguMjc5LDEySDcuNjE4Yy0wLjc2MiwwLTEuNDQ4LDAuNDI0LTEuNzg5LDEuMTA2bC0wLjYxOCwxLjIzNg0KCQkJQzUuMDczLDE0LjYxOCw1LDE0LjkyNyw1LDE1LjIzNlYxNy41YzAsMS4yNTIsMC41OTgsMi40NDksMS42LDMuMkw5LDIyLjVWMjNjLTAuNTUyLDAtMSwwLjQ0OC0xLDF2N2MwLDAuNTUyLDAuNDQ4LDEsMSwxaDEzDQoJCQljMC41NTIsMCwxLTAuNDQ4LDEtMXYtN2MwLTAuNDc5LTAuMzQzLTAuODYtMC43OTItMC45NThsMi4yNjktMy4xMDdDMjQuODE1LDE5LjU2NSwyNSwxOS4wOSwyNSwxOC41ODZ2LTUuMjgzDQoJCQlDMjUsMTIuOTA3LDI0Ljg4NCwxMi41MjMsMjQuNjY0LDEyLjE5M3ogTTIyLDMxSDl2LTdoMTNWMzF6IE0yNCwxOC41ODZjMCwwLjI2NS0wLjEwNSwwLjUyLTAuMjkzLDAuNzA3TDIxLDIzSDEwdi0xbC0yLjgtMi4xDQoJCQlDNi40NDUsMTkuMzMzLDYsMTguNDQ0LDYsMTcuNXYtMi4yNjRjMC0wLjE1NSwwLjAzNi0wLjMwOCwwLjEwNi0wLjQ0N2wwLjYxOC0xLjIzNkM2Ljg5MywxMy4yMTQsNy4yMzksMTMsNy42MTgsMTNIOWwwLjc3Mi0yLjMxNg0KCQkJQzkuOTA4LDEwLjI3NSwxMC4yOSwxMCwxMC43MjEsMTBIMTRWM2MwLTEuMTA1LDAuODk1LTIsMi0yYzEuMTA1LDAsMiwwLjg5NSwyLDJ2N2gzLjQ2NWMwLjMzNCwwLDAuNjQ3LDAuMTY3LDAuODMyLDAuNDQ1DQoJCQlsMS41MzUsMi4zMDNDMjMuOTQyLDEyLjkxMiwyNCwxMy4xMDUsMjQsMTMuMzAzVjE4LjU4NnoiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4=");
+
+/***/ }),
+
+/***/ "./src/blocks/easybutton/edit.js":
+/*!***************************************!*\
+  !*** ./src/blocks/easybutton/edit.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function Edit(props) {
+  const postTypes = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
+    const data = select("core").getEntityRecords("root", "postType", {
+      per_page: -1
+    });
+    return data?.filter(item => item.visibility.show_in_nav_menus && item.visibility.show_ui);
+  });
+  const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
+    const data = select("core").getEntityRecords("postType", props.attributes.postType, {
+      per_page: -1
+    });
+    return data;
+  }, [props.attributes.postType]);
+  console.log({
+    posts
+  });
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: "Destination"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: "Type",
+    value: props.attributes.postType,
+    onChange: newValue => {
+      props.setAttributes({
+        postType: newValue
+      });
+    },
+    options: [{
+      label: "Select a post type...",
+      value: ""
+    }, ...(postTypes || []).map(postType => ({
+      label: postType.labels.singular_name,
+      value: postType.slug
+    }))]
+  }), !!props.attributes.postType && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: `Linked ${props.attributes.postType}`,
+    value: props.attributes.linkedPost,
+    onChange: newValue => {
+      props.setAttributes({
+        linkedPost: newValue ? parseInt(newValue) : null
+      });
+    },
+    options: [{
+      label: `Select a ${props.attributes.postType} to link to`,
+      value: ""
+    }, ...(posts || []).map(post => ({
+      label: post.title.rendered,
+      value: post.id
+    }))]
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...blockProps
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    placeholder: "Label text",
+    value: props.attributes.labelText,
+    allowedFormats: [],
+    multiline: false,
+    onSplit: () => {},
+    onReplace: () => {},
+    onChange: newValue => {
+      props.setAttributes({
+        labelText: newValue
+      });
+    }
+  })));
+}
+
+/***/ }),
+
+/***/ "./src/blocks/easybutton/index.js":
+/*!****************************************!*\
+  !*** ./src/blocks/easybutton/index.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/easybutton/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/easybutton/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/easybutton/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/blocks/easybutton/block.json");
+/* harmony import */ var _assets_icon_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon.svg */ "./src/blocks/easybutton/assets/icon.svg");
+
+/**
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_5__.name, {
+  /**
+   * @see ./edit.js
+   */
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  /**
+   * @see ./save.js
+   */
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"],
+  icon: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _assets_icon_svg__WEBPACK_IMPORTED_MODULE_6__["default"]
+  })
+});
+
+/***/ }),
+
+/***/ "./src/blocks/easybutton/save.js":
+/*!***************************************!*\
+  !*** ./src/blocks/easybutton/save.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Save)
+/* harmony export */ });
+function Save() {
+  return null;
+}
+
+/***/ }),
+
+/***/ "./src/blocks/easybutton/style.scss":
+/*!******************************************!*\
+  !*** ./src/blocks/easybutton/style.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/data":
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["data"];
+
+/***/ }),
+
+/***/ "./src/blocks/easybutton/block.json":
+/*!******************************************!*\
+  !*** ./src/blocks/easybutton/block.json ***!
+  \******************************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"easyblocks/easy-button","version":"1.0.1","title":"Easy Button","category":"easyblocks","icon":"button","description":"A button that links to a particular post type","supports":{"html":false,"color":{"background":true,"text":true,"link":false,"gradients":true,"enableContrastChecker":true},"spacing":{"padding":true}},"attributes":{"postType":{"type":"string","default":""},"linkedPost":{"type":"number"},"labelText":{"type":"string","default":""},"style":{"type":"object","default":{"color":{"background":"#000000","text":"#FFFFFF"},"spacing":{"padding":{"top":"15px","bottom":"15px","left":"15px","right":"15px"}}}}},"textdomain":"easyblocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","parent":["easyblocks/easy-group"]}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"blocks/easybutton/index": 0,
+/******/ 			"blocks/easybutton/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkeasyblocks"] = globalThis["webpackChunkeasyblocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/easybutton/style-index"], () => (__webpack_require__("./src/blocks/easybutton/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map
