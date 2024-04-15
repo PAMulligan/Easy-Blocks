@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-around;
 }
+.wp-block-easyblocks-easy-gallery a {
+  text-decoration: none;
+}
 
 @media screen and (max-width: 767px) {
   .wp-block-easyblocks-easy-gallery {

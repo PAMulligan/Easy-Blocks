@@ -78,7 +78,7 @@ function Edit(props) {
   });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.JustifyContentControl, {
     value: props.attributes.justifyContent,
-    allowedControls: ["left", "center", "right"],
+    allowedControls: ["left", "center", "right", "space-between"],
     onChange: newValue => {
       props.setAttributes({
         justifyContent: newValue

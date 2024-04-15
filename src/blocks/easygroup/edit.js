@@ -22,7 +22,7 @@ export default function Edit(props) {
 			<BlockControls>
 				<JustifyContentControl
 					value={props.attributes.justifyContent}
-					allowedControls={["left", "center", "right"]}
+					allowedControls={["left", "center", "right", "space-between"]}
 					onChange={(newValue) => {
 						props.setAttributes({
 							justifyContent: newValue,
